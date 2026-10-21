@@ -2,7 +2,7 @@
 
 Freeze: frozen
 
-Pesquisa: por que algumas organizações fornecedoras de projetos CDS do PAA–Cozinhas atendem muito mais unidades (`pesquisa/protocolo.md`). Decisões: D-9 (revisão do plano) e D-10 (congelamento). Código: `pesquisa/scripts/h1_confirmatorio.py` (H1) e `pesquisa/scripts/h2_exploratorio.py` (H2), com versões em `pesquisa/requirements.txt`.
+Pesquisa: descrição de como as organizações fornecedoras de projetos CDS do PAA–Cozinhas se ligam às unidades recebedoras em 2025 (`pesquisa/protocolo.md`, D-22). H1 é o teste explicativo registrado para quando houver outro ano. Decisões: D-9 (revisão do plano) e D-10 (congelamento). Código: `pesquisa/scripts/h1_confirmatorio.py` (H1) e `pesquisa/scripts/h2_exploratorio.py` (H2), com versões em `pesquisa/requirements.txt`.
 
 ## H1
 
@@ -172,7 +172,7 @@ INCONCLUSIVE when: não se aplica; terminal NOT_VERIFIED como hipótese.
 
 | ID | Assumption | Check | Failure action |
 |---|---|---|---|
-| A1 | A participação de pool mede compartilhamento independentemente do tamanho da rede | K1 | não vale: densidade ≥ 0,5 exige, num componente com O organizações, ≥ O/2 organizações por unidade em média, e fica mais difícil com mais organizações (REVIEW-5). Por isso a descrição usa também medidas que não dependem do tamanho (vínculos por organização, organizações por unidade) e relata a associação da participação de pool com o nº de organizações |
+| A1 | A participação de pool mede compartilhamento independentemente do tamanho da rede | K1 | não vale: densidade ≥ 0,5 exige, num componente com O organizações, ≥ O/2 organizações por unidade em média, e fica mais difícil com mais organizações (REVIEW-5). Por isso a descrição usa também medidas sem o limiar O/2 (vínculos por organização, organizações por unidade), ainda que limitadas por O e U, e relata a associação da participação de pool com o nº de organizações. A cobertura média é a densidade do grafo da UF e tem a mesma dependência (D-24) |
 
 ### Primary analysis
 

@@ -201,3 +201,8 @@ Consequências:
 4. **Manuscrito.** Volta a declarar a mudança de escopo de explicativo para descritivo (D-22), a versão do manual não lida para 2025, o registro interno reaberto três vezes e o corte ajustado aos dados (F4). MG passa a ser descrita à parte (F5). Os números do Resumo passam ao corpo com fonte (F6). Usa "unidades vinculadas" e define a razão (F2).
 Rationale: lei 5. Uma revisão adversarial mostrou que a métrica não sustentava a leitura.
 Revision condition: medida ajustada por tamanho que mostre diferença entre UFs além do efeito de tamanho.
+
+### D-24 · 2026-10-21 · Resposta à REVIEW-6
+A REVIEW-6 (FAIL) achou uma frase falsa introduzida pela correção anterior: "as UFs com grau alto são as mais afetadas pela perda". É o contrário (AL 0,11, PB e RN 0,00). Também achou generalizações excessivas: o superlativo sobre a cobertura; a cobertura tratada como independente do tamanho, quando é a densidade do grafo da UF; a decomposição do grau de AL, PB e RN tratada como igual; "medidas que não dependem do tamanho"; e PE, RS e MG sem ressalva de registro. Tudo foi corrigido no manuscrito, no plano (linha de contexto e A1 de H3) e no protocolo (E4). A frase sobre a perda passa a ser a afirmação C11 (R6), e a dos vínculos interestaduais, C12 (R6).
+Rationale: lei 5.
+Revision condition: nenhuma; é correção de redação.
