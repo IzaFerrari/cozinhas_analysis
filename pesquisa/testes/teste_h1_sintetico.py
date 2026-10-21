@@ -40,13 +40,14 @@ def sintetico(pasta, troca=lambda s: s):
         novas = [troca(("2026," + l[5:]).replace("/2025/", "/2026/")) if l.startswith("2025,") else troca(l) for l in linhas]
         open(f"{pasta}/{n}", "w", encoding="utf-8").write("\n".join(novas))
 
-def rodar(pasta, ano, com_hash=True):
+def rodar(pasta, ano, com_hash=True, arquivos=("contratacoes.csv", "unidades.csv"), estraga=False):
     cwd = tempfile.mkdtemp()
     os.makedirs(f"{cwd}/pesquisa/dados")
     if com_hash:
         with open(f"{cwd}/pesquisa/dados/DATA2.sha256", "w") as f:
-            for n in ["contratacoes.csv", "unidades.csv"]:
-                f.write(hashlib.sha256(open(f"{pasta}/{n}", "rb").read()).hexdigest() + "  " + n + "\n")
+            for n in arquivos:
+                h = hashlib.sha256(open(f"{pasta}/{n}", "rb").read()).hexdigest()
+                f.write(("0" * 64 if estraga else h) + "  " + n + "\n")
     antes = os.getcwd(); os.chdir(cwd)
     try:
         h1.main(pasta, brutos, f"{cwd}/saida.json", ano)
@@ -64,6 +65,9 @@ caso("2026: PR herdado, fora de K2", list(r["herdadas_relato"]) == ["PR"] and "P
 caso("2026: seis utilizáveis, nenhum discordante, INCONCLUSIVE", len(r["utilizaveis_K2"]) == 6 and r["T1"]["discordantes"] == 0 and r["T1"]["estado"] == "INCONCLUSIVE")
 caso("2026: nenhum projeto repetido de DATA1", r["projetos_ja_em_data1"] == 0)
 caso("sem arquivo de hash: BLOCKED", "BLOCKED" in rodar(igual, "2026", com_hash=False))
+caso("arquivo de hash vazio: BLOCKED (K1)", "BLOCKED (K1)" in rodar(igual, "2026", arquivos=()))
+caso("arquivo de hash parcial: BLOCKED (K1)", "BLOCKED (K1)" in rodar(igual, "2026", arquivos=("contratacoes.csv",)))
+caso("hash divergente: BLOCKED (K1)", "BLOCKED (K1)" in rodar(igual, "2026", estraga=True))
 rotulo = f"{base}/rotulo"; sintetico(rotulo, lambda s: s.replace(",CDS,", ",CDSX,"))
 caso("rótulo de mecanismo estranho: BLOCKED (K1)", "BLOCKED (K1)" in rodar(rotulo, "2026"))
 semano = f"{base}/semano"; sintetico(semano, lambda s: s.replace("ANO,", "ANNO,", 1) if s.startswith("ANO,") else s)
@@ -72,6 +76,25 @@ repetido = f"{base}/repetido"; os.makedirs(repetido)
 for n in ["contratacoes.csv", "unidades.csv"]:
     shutil.copy(f"{brutos}/{n}", f"{repetido}/{n}")
 caso("só projetos já vistos (ano 2025, não ensaio): BLOCKED", "BLOCKED" in rodar(repetido, "2025"))
+# ponta a ponta com discordantes: 2024, BA, PI e SE com um código novo por linha (razão sobe ao lado pool,
+# mas cada código tem uma só organização, então o padrão continua esparso: a persistência acerta)
+contador = iter(range(10**6))
+def unicos(s):
+    if s.split(",")[7:8] and s.split(",")[7][:3] in ("BA/", "PI/", "SE/") and s.startswith("2024,"):
+        partes = s.split(","); partes[-1] = f"CS9{next(contador):06d}"; return ",".join(partes)
+    return s
+cruza = f"{base}/cruza"; os.makedirs(cruza)
+for n in ["contratacoes.csv", "unidades.csv"]:
+    linhas = open(f"{brutos}/{n}", encoding="utf-8").read().split("\n")
+    novas = [("2024," + l[5:]).replace("/2025/", "/2024/") if l.startswith("2025,") else l for l in linhas]
+    if n == "unidades.csv":
+        novas = [unicos(l) for l in novas]
+    open(f"{cruza}/{n}", "w", encoding="utf-8").write("\n".join(novas))
+r = rodar(cruza, "2024")
+caso("2024: BA, PI e SE discordantes", isinstance(r, dict) and sorted(x["uf"] for x in r["T1"]["ufs"]) == ["BA", "PI", "SE"])
+caso("2024: CONFIRMED 3/3 com p = 0,125", r["T1"]["estado"] == "CONFIRMED" and r["T1"]["acertos_regra"] == 3 and r["T1"]["p_binomial_meio"] == 0.125)
+caso("2024: sensibilidades T2 a T5 e K5 calculadas", all(k in r for k in ["T2", "T3", "T4", "T5", "K5_sobreposicao_mediana_discordantes"]))
+caso("2024: PI não é excluído por exposição", r["expostas_excluidas"] == [])
 shutil.rmtree(base)
 print(f"{len(ok)} casos passaram:")
 print("\n".join(f"- {c}" for c in ok))

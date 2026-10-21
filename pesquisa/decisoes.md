@@ -152,3 +152,12 @@ Correção de registro (N8): a D-8 chamou o Ato Dipai nº 05/2024 de "vigente em
 Transparência: é o terceiro REOPEN de H1 (D-12, D-16, D-17), todos antes de qualquer DATA2. Os dois últimos foram motivados por revisões adversariais separadas, e o primeiro, por diagnóstico de DATA1.
 Rationale: leis 2 e 5.
 Revision condition: mudança só por bloco novo com `Supersedes: D-17`, antes de abrir DATA2.
+
+### D-18 · 2026-10-21 · Ajustes menores pela REVIEW-3 (PASS), antes de qualquer DATA2
+Supersedes: D-17
+A REVIEW-3 (`.research/reviews/REVIEW-3.md`) deu PASS, com sete achados menores. Nenhum muda estimando, população, desfecho, preditores, faixa ou regra de decisão:
+1. **Hash (achado 1).** O código implementava A1 de modo incompleto. `DATA2.sha256` precisa listar exatamente os dois arquivos, senão BLOCKED, e a divergência de hash sai como "BLOCKED (K1)". O teste sintético ganhou casos de arquivo vazio, parcial e divergente, e um caso de ponta a ponta com três UFs discordantes. São 23 casos, todos passando (`pesquisa/testes/resultado.txt`).
+2. **Texto (achados 2 a 7).** O enunciado de H1 foi alinhado com a D-17 no protocolo e no registro. "Utilizável" passa a ter um só sentido: população primária sem as herdadas. A frase da D-17 "um CONFIRMED refuta a escassez para qualquer limiar compatível com DATA1" é substituída por "um CONFIRMED não depende do ponto escolhido dentro da faixa", porque a primeira ia além do May claim. A assimetria da discordância (UF de pool precisa de ≥ 7 organizações para chegar a ≤ 1,45) foi declarada. No manuscrito, o 0,57 do PR (regra anterior à D-16) foi trocado por "mais da metade", porque com a regra nova o valor é cerca de 0,54. Também foram corrigidos o escopo da regra de código, a cobertura do teste, "ao menos desde dezembro de 2023" e o ano das notícias.
+O código congelado muda só na leitura do hash. O caminho de ensaio, que usa o hash de DATA1, não muda, então R6 continua sendo a saída do código atual nesse modo.
+Rationale: lei 5. Os achados menores foram corrigidos antes de publicar e antes de abrir DATA2.
+Revision condition: mudança só por bloco novo com `Supersedes: D-18`, antes de abrir DATA2.

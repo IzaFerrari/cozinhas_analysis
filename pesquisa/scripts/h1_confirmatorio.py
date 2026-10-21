@@ -5,7 +5,7 @@
 #   ano         ano confirmatório; só linhas com ANO igual entram. "2025-ensaio" = ensaio em amostra
 #               com DATA1 como alvo (sem exclusão de projetos já vistos); nunca é teste de H1
 # Hash esperado de DATA2: lido de pesquisa/dados/DATA2.sha256, commitado antes de abrir (D-17); sem ele, BLOCKED.
-# Congelado com o plano (D-10, D-12, D-16, D-17). Mudança depois do congelamento só por CHANGE_PLAN.
+# Congelado com o plano (D-10, D-12, D-16, D-17, D-18). Mudança depois do congelamento só por CHANGE_PLAN.
 import sys, json, hashlib
 from math import comb
 import pandas as pd
@@ -146,14 +146,17 @@ def hash_esperado(ensaio):
         linhas = open(ARQ_HASH).read().split("\n")
     except FileNotFoundError:
         raise SystemExit(f"BLOCKED (K1): {ARQ_HASH} ausente; registre o hash de DATA2 antes de abrir")
-    return {nome: h for h, nome in (l.split() for l in linhas if l.strip())}
+    pares = [l.split() for l in linhas if l.strip()]
+    if any(len(p) != 2 for p in pares) or sorted(n for _, n in pares) != ["contratacoes.csv", "unidades.csv"]:
+        raise SystemExit(f"BLOCKED (K1): {ARQ_HASH} precisa listar exatamente contratacoes.csv e unidades.csv")  # D-18
+    return {nome: h for h, nome in pares}
 
 
 def main(alvo, referencia, saida, ano):
     ensaio = ano.endswith("-ensaio")
     for n, h in hash_esperado(ensaio).items():
         if hashlib.sha256(open(f"{alvo}/{n}", "rb").read()).hexdigest() != h:
-            raise SystemExit(f"hash de {n} não confere com o registrado")
+            raise SystemExit(f"BLOCKED (K1): hash de {n} não confere com o registrado")
     c2, u2 = carregar(alvo)
     c1, u1 = carregar(referencia)
     rotulos = set(c2["MECANISMO RESUMO 2"].dropna().str.strip())

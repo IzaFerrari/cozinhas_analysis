@@ -28,7 +28,7 @@ Rota, perecibilidade e complementaridade de cesta estão em `Deferred` no mapa (
 
 ### Hipóteses
 
-- **H1** (confirmatória). Nas UFs elegíveis em que o regime de 2025 (DATA1) e a escassez do ano confirmatório (DATA2) preveem classes diferentes, o regime de DATA2 segue o de DATA1. Estimando **E1**; teste primário **T1**; sensibilidades T2 a T5. Regras, checagens e fronteira em `analysis-plan.md#h1`. Refutação: o regime de DATA2 segue a escassez em ≥ 75% das UFs discordantes.
+- **H1** (confirmatória). Nas UFs utilizáveis que em 2025 (DATA1) estavam do lado da faixa de escassez correspondente à sua classe e cuja razão unidades/organizações, no ano confirmatório, sai da faixa (1,45; 2,00) para o lado oposto, o regime do ano confirmatório segue o de 2025 (D-17). Estimando **E1**; teste primário **T1**; sensibilidades T2 a T5. Regras, checagens e fronteira em `analysis-plan.md#h1`. Refutação: o regime de DATA2 segue a escassez em ≥ 75% das UFs discordantes.
 - **H2** (exploratória). Elasticidade do grau em relação ao kg previsto, dentro da UF, em DATA1. Estimando **E2**; teste **T6**; especificação descritiva T7. Estado terminal previsto: `NOT_VERIFIED` (`analysis-plan.md#h2`).
 
 ### Estimandos

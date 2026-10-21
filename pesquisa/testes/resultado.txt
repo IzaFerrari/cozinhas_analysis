@@ -1,4 +1,4 @@
-16 casos passaram:
+23 casos passaram:
 - borda 2,00 é pool
 - borda 1,45 é esparsa
 - 1,725 é indeterminado
@@ -12,6 +12,13 @@
 - 2026: seis utilizáveis, nenhum discordante, INCONCLUSIVE
 - 2026: nenhum projeto repetido de DATA1
 - sem arquivo de hash: BLOCKED
+- arquivo de hash vazio: BLOCKED (K1)
+- arquivo de hash parcial: BLOCKED (K1)
+- hash divergente: BLOCKED (K1)
 - rótulo de mecanismo estranho: BLOCKED (K1)
 - sem coluna ANO: BLOCKED (K1)
 - só projetos já vistos (ano 2025, não ensaio): BLOCKED
+- 2024: BA, PI e SE discordantes
+- 2024: CONFIRMED 3/3 com p = 0,125
+- 2024: sensibilidades T2 a T5 e K5 calculadas
+- 2024: PI não é excluído por exposição
