@@ -161,3 +161,8 @@ A REVIEW-3 (`.research/reviews/REVIEW-3.md`) deu PASS, com sete achados menores.
 O código congelado muda só na leitura do hash. O caminho de ensaio, que usa o hash de DATA1, não muda, então R6 continua sendo a saída do código atual nesse modo.
 Rationale: lei 5. Os achados menores foram corrigidos antes de publicar e antes de abrir DATA2.
 Revision condition: mudança só por bloco novo com `Supersedes: D-18`, antes de abrir DATA2.
+
+### D-19 · 2026-10-21 · Ajustes triviais pela REVIEW-4 (PASS)
+A REVIEW-4 (`.research/reviews/REVIEW-4.md`) deu PASS no diff da D-18. Ajustes: "utilizáveis" no E1 do protocolo com o sentido da D-18; o item 3 do registro com todas as notícias vistas; a frase da assimetria no plano corrigida para AL; o teste sintético agora confere que T2, T3, T4 e T5 têm os três discordantes e que K5 foi calculada (25 casos, todos passando). Nada muda em estimando, população, desfecho, preditores, faixa, regra de decisão ou código congelado.
+Rationale: lei 5.
+Revision condition: não revisável; é ajuste de texto e de teste.

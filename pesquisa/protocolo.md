@@ -33,7 +33,7 @@ Rota, perecibilidade e complementaridade de cesta estão em `Deferred` no mapa (
 
 ### Estimandos
 
-- **E1.** Na população de UFs utilizáveis (elegíveis nos dois anos, sem as excluídas por K7, K3 e exposição; D-12, D-16), e restrita às UFs discordantes, isto é, as que saem da faixa de escassez (1,45; 2,00) para o lado oposto ao da sua classe (D-17): a proporção cuja classe de regime em DATA2 coincide com a classe de DATA1, contra a proporção que coincide com a classe prevista pela razão unidades/organizações de DATA2 (faixa de 1,45 a 2,00; D-17).
+- **E1.** Na população de UFs utilizáveis (elegíveis nos dois anos, sem as excluídas por K7, K3 e exposição, e sem as herdadas; D-12, D-16, D-18), e restrita às UFs discordantes, isto é, as que saem da faixa de escassez (1,45; 2,00) para o lado oposto ao da sua classe (D-17): a proporção cuja classe de regime em DATA2 coincide com a classe de DATA1, contra a proporção que coincide com a classe prevista pela razão unidades/organizações de DATA2 (faixa de 1,45 a 2,00; D-17).
 - **E2.** Em DATA1, nas organizações CDS com vínculo: a inclinação de log(grau registrado) em log(kg previsto) dentro da UF.
 
 ### Dados e população

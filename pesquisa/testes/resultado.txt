@@ -1,4 +1,4 @@
-23 casos passaram:
+25 casos passaram:
 - borda 2,00 é pool
 - borda 1,45 é esparsa
 - 1,725 é indeterminado
@@ -20,5 +20,7 @@
 - só projetos já vistos (ano 2025, não ensaio): BLOCKED
 - 2024: BA, PI e SE discordantes
 - 2024: CONFIRMED 3/3 com p = 0,125
-- 2024: sensibilidades T2 a T5 e K5 calculadas
+- 2024: T2, T3 e T5 com os 3 discordantes
+- 2024: T4 com os 3 discordantes nos três pontos
+- 2024: K5 calculada (projetos novos, sobreposição 0)
 - 2024: PI não é excluído por exposição

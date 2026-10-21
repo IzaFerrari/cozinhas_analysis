@@ -6,7 +6,7 @@ Derivado de `pesquisa/protocolo.md` e `analysis-plan.md`; em caso de divergênci
 
 1. **Pergunta.** O grau alto das organizações em algumas UFs vem de um regime de alocação persistente na UF ou da escassez local de organizações?
 2. **Hipótese confirmatória H1.** Nas UFs utilizáveis que em 2025 (DATA1) estavam do lado da faixa de escassez correspondente à sua classe e cuja razão unidades/organizações, no ano confirmatório, sai da faixa (1,45; 2,00) para o lado oposto, o regime do ano confirmatório segue o de 2025 (D-17).
-3. **Dado confirmatório.** DATA2: a planilha CONAB do PAA–Cozinhas de outro ano, com o mesmo esquema. Não identificado na data do registro; nenhum conteúdo de DATA2 foi visto. Números de notícias de 2026 foram vistos (`pesquisa/literatura/busca.md`).
+3. **Dado confirmatório.** DATA2: a planilha CONAB do PAA–Cozinhas de outro ano, com o mesmo esquema. Não identificado na data do registro; nenhum conteúdo de DATA2 foi visto. Números de notícias de 2025, de 2026 e de ano não verificado foram vistos (`pesquisa/literatura/busca.md`).
 4. **Desfecho.** Classe de regime da UF (pool se a participação de pool for ≥ 0,5; D-6).
 5. **Preditores congelados.** A classe de cada UF em DATA1 (tabela em `analysis-plan.md#h1`) e a faixa de escassez: lado pool com razão ≥ 2,00, lado esparsa com razão ≤ 1,45 (D-17).
 6. **Teste primário T1.** Contagem nas UFs discordantes. Discordante é a UF que sai da faixa para o lado oposto ao da sua classe (D-17); o PI sai se o ano confirmatório for 2026 (D-16); o PR é herdado e relatado à parte. CONFIRMED com ≥ 3 discordantes e ≥ 75% de acertos da persistência; REFUTED com ≥ 75% de acertos da escassez; INCONCLUSIVE nos demais casos.
