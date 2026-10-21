@@ -1,0 +1,19 @@
+{
+  "id": "RUN-1",
+  "mode": "exploratory",
+  "hypothesis": "H1",
+  "estimand": "E1",
+  "test": "T1",
+  "execution_freeze": "09b4cf7d00155687441c1335c7fdaf96d017d5a7",
+  "commit": "445fabf319ad11513b72a2a6cdaa7a9228b81a8a",
+  "note": "Ensaio em amostra do código congelado de H1 com DATA1 como alvo e como referência. Não é teste de H1: DATA1 é descoberta (D-2). Verifica o código e descreve as classes de DATA1.",
+  "inputs": [
+    {"id": "DATA1", "path": "pesquisa/dados/brutos/contratacoes.csv", "role": "discovery"},
+    {"id": "DATA1", "path": "pesquisa/dados/brutos/unidades.csv", "role": "discovery"}
+  ],
+  "outputs": [{"result": "R1", "artifact": "pesquisa/agregados/h1_data1_em_amostra.json"}],
+  "replay": {
+    "command": [".venv/bin/python", "-I", "pesquisa/scripts/h1_confirmatorio.py", "pesquisa/dados/brutos", "pesquisa/dados/brutos", "pesquisa/agregados/h1_data1_em_amostra.json"],
+    "environment": ["pesquisa/requirements.txt"]
+  }
+}
