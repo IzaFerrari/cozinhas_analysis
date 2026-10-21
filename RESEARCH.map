@@ -26,7 +26,7 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 | 1B Problem — establish | reached | | `pesquisa/problem-brief.md` · `pesquisa/decisoes.md#d-7` |
 | 2 Literature | reached | | `pesquisa/literatura/busca.md` · `pesquisa/literatura/fontes.md#lacuna` · `pesquisa/decisoes.md#d-8` |
 | 3 Protocol | reached | | `pesquisa/protocolo.md#compromissos-congelados` · `analysis-plan.md` · `pesquisa/registro.md` · `pesquisa/decisoes.md#d-10` |
-| 4 Data | pending | | |
+| 4 Data | reached | | `pesquisa/dados/relatorio.md` · `pesquisa/agregados/dados.csv` · `pesquisa/decisoes.md#d-11` |
 | 5 Analysis | pending | | |
 | 6 Writing | pending | | |
 | 7 Review | pending | | |
@@ -44,4 +44,5 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 - 2026-10-21: 1B alcançado — P1 e P2 SHOWN (D-6), com regime e escassez quase colineares em DATA1 (D-7)
 - 2026-10-21: fase 2 alcançada — regra de seleção lida no MOC Título 30 (versão 2026); lacuna sobre a estrutura organização–unidade; planilha de outro ano não encontrada (D-8)
 - 2026-10-21: fase 3 alcançada — H1 confirmatória e H2 exploratória (D-9); protocolo, plano e registro interno congelados (D-10)
-- Next: fase 4 — relatório de dados de DATA1 e identificação de DATA2
+- 2026-10-21: fase 4 alcançada para DATA1; DATA2 não identificado, H1 bloqueada (D-11)
+- Next: fase 5 — execuções exploratórias em DATA1 (H1 em amostra, H2) com recibo; H1 confirmatória em BLOCKED

@@ -87,3 +87,8 @@ O protocolo (`Estado: congelado`), o plano (`Freeze: frozen`), o registro intern
 Registro externo (OSF ou outro): não feito. Publicaria a pesquisa fora do repositório, o que é decisão humana. Fica registrado como `internal` no mapa. Se a orientação acadêmica pedir registro externo, ele deve ser feito antes de abrir DATA2, e entra por bloco novo.
 Rationale: lei 2. O registro interno prova a ordem dos commits, não a ausência de outras exposições.
 Revision condition: mudança de estimando, população, desfecho, preditores, limiares ou regra de decisão só por bloco novo com `Supersedes: D-10`, e antes de abrir DATA2. Depois de abrir DATA2, qualquer mudança torna o resultado exploratório.
+
+### D-11 · 2026-10-21 · Fase 4: DATA1 documentado; DATA2 não identificado
+O relatório de dados (`pesquisa/dados/relatorio.md`) documenta a procedência, a ligação, as duplicidades, a granularidade e a população de DATA1. DATA2 não foi identificado: o arquivo-fonte atual só tem 2025, com as mesmas linhas de DATA1, e as buscas não acharam planilha de outro ano. H1 fica `BLOCKED` até DATA2 existir. A fase 4 é dada como alcançada para DATA1, com o bloqueio de DATA2 explícito.
+Rationale: lei 1. A falta do dado confirmatório vira estado, não suposição.
+Revision condition: DATA2 identificado, com hash e procedência registrados antes de abrir. Isso reabre a fase 4 para DATA2 e permite o FIT de H1.
