@@ -1,0 +1,16 @@
+{
+  "id": "RUN-5",
+  "mode": "exploratory",
+  "hypothesis": "H1",
+  "estimand": "E1",
+  "test": "T1",
+  "execution_freeze": "d5b82c5",
+  "commit": "e1fe836",
+  "note": "Ensaio em amostra (modo 2025-ensaio) do código de H1 congelado na D-16 (d5b82c5), com DATA1 como alvo e referência. Verifica que o código roda e reproduz as classes de DATA1. Com referência igual ao alvo, K5, T2 e T3 são triviais e nenhuma UF cruza o limiar. Não é teste de H1 (D-2).",
+  "inputs": [{"id": "DATA1", "path": "pesquisa/dados/brutos", "role": "discovery"}],
+  "outputs": [{"result": "R5", "artifact": "pesquisa/agregados/h1_data1_ensaio_v3.json"}],
+  "replay": {
+    "command": ["/home/izaferrari/cozinhas/.venv/bin/python", "-I", "pesquisa/scripts/h1_confirmatorio.py", "pesquisa/dados/brutos", "pesquisa/dados/brutos", "pesquisa/agregados/h1_data1_ensaio_v3.json", "2025-ensaio", "480b46c4660add2d8f8f64b1206bd04c05a85e21432b4cc5b9103879ebd31dbc", "6754d7152e46ded005c27e61072420b40710a80bec86be79b3184fd0bc1db102"],
+    "environment": ["pesquisa/requirements.txt"]
+  }
+}
