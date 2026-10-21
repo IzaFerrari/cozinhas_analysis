@@ -182,3 +182,12 @@ Consequências, sem mudar o plano congelado (D-18):
 5. O notebook `analise.ipynb` lê a planilha online, e os números dele podem mudar a cada atualização. Os números desta pesquisa vêm do snapshot congelado DATA1 (D-1) e não mudam.
 Rationale: lei 1. A natureza da fonte é um fato de domínio que veio de quem conduz a pesquisa.
 Revision condition: informação da CONAB sobre como e quando a planilha é atualizada.
+
+### D-22 · 2026-10-21 · Escopo passa a descritivo
+Supersedes: D-3
+Decisão humana (IzaFerrari, 2026-10-21): "se não conseguir o porquê, faz descritivo". Sem dado independente (D-11, D-21), a pergunta explicativa não pode ser decidida agora. A pesquisa passa a ser **descritiva**: como as organizações fornecedoras de projetos CDS se ligam às unidades recebedoras no snapshot de 2025 (DATA1).
+- Estimandos descritivos do censo do snapshot, sem inferência amostral: E3, a distribuição do grau por organização; E4, a estrutura dos vínculos por UF (participação de pool, razão unidades/organizações) e a sua relação com a escassez; E5, a perda previsto→registrado. Todos já foram calculados nas execuções exploratórias RUN-3 (R3) e RUN-6 (R6). Isso é declarado: as escolhas de medida foram feitas depois de ver os dados (D-2, D-6, D-16), e os números descrevem o snapshot, não testam hipóteses.
+- H1 continua registrada e congelada como trabalho futuro, com estado `BLOCKED` até a planilha ganhar outro ano (D-21). H2 continua `NOT_VERIFIED`. Não há hipótese nova.
+- O manuscrito passa a ser descritivo. A explicação aparece só como hipótese aberta, com o teste registrado.
+Rationale: escolha de quem conduz a pesquisa. Descrição censitária de um snapshot exposto é legítima se as escolhas posteriores à exposição estão declaradas e nada é apresentado como confirmação.
+Revision condition: a planilha ganhar outro ano reabre H1 (D-21) sem desfazer a descrição.

@@ -1,83 +1,152 @@
-# Como as organizações fornecedoras se ligam às cozinhas solidárias no PAA: a estrutura dos vínculos em 2025 e um teste registrado para o regime de alocação por UF
+# Como as organizações fornecedoras se ligam às cozinhas solidárias no PAA: um retrato dos vínculos em 2025
 
-Manuscrito de trabalho. Os resultados são **exploratórios**. A hipótese confirmatória está registrada e congelada, mas **bloqueada** porque o dado independente ainda não foi obtido. Autoria, venue e licença: a definir (decisão humana).
+Manuscrito de trabalho, **descritivo**. Autoria, venue e licença: a definir (decisão humana).
 
 ## Resumo
 
-Investigamos por que algumas organizações fornecedoras de projetos de Compra com Doação Simultânea (CDS) do PAA–Cozinhas, executado pela CONAB, atendem muito mais unidades recebedoras do que outras. Usamos a planilha pública da CONAB de 2025. A distribuição é assimétrica: a mediana é de 2 unidades por organização e o máximo é 23. Nas UFs com ao menos dez unidades e três organizações, a forma dos vínculos se separa em dois padrões. Em AL, PB, RN, SC e PE, as organizações compartilham boa parte das mesmas unidades: a densidade do componente principal vai de 0,55 a 0,82, e PE se divide em quatro componentes (pool denso). Em BA, PI, MG e SE, os vínculos formam uma rede esparsa e sobreposta. Territórios exclusivos são raros, salvo no PR, onde mais da metade dos vínculos está em componentes de uma só organização, e, em parte, em MG (0,23). Em 2025, os dois padrões quase coincidem com a razão entre unidades e organizações, e por isso os dados de um só ano não separam uma regra de alocação própria da UF da simples escassez de fornecedores. Na versão de 2026 do manual de operações da CONAB, a lista de cozinhas vem do MDS. O manual prevê chamada aberta sobre a demanda mapeada, indicação de organizações pela própria cozinha e compra direcionada. Não lemos a versão vigente em 2025. A ligação entre essas formas e os padrões observados é inferência nossa. Antes de obter planilha de outro ano, registramos um teste para as UFs cuja razão sair da faixa em que 2025 não identifica o ponto de corte (entre 1,45 e 2,00 unidades por organização) para o lado oposto ao do seu padrão. Nelas, o teste verifica se o padrão acompanha a nova razão ou persiste. Ele não pôde ser executado e não distinguiria a rota administrativa de outras características estáveis da UF. Também documentamos que 0,315 das unidades previstas nas propostas CDS não aparecem como registradas, com a perda concentrada nos projetos grandes.
+Descrevemos como as organizações fornecedoras de projetos de Compra com Doação Simultânea (CDS) do PAA–Cozinhas, executado pela CONAB, se ligam às unidades recebedoras. Usamos a planilha pública da CONAB de 2025, num snapshot congelado.
+
+**Grau.** A distribuição é assimétrica: a organização típica atende 2 unidades, a média é 3,42 e o máximo é 23.
+
+**Padrões por UF.** Nas UFs com ao menos dez unidades e três organizações, os vínculos se organizam de dois modos:
+- **pool denso** (AL, PB, RN, SC e PE): as organizações compartilham boa parte das mesmas unidades. A densidade do componente principal vai de 0,55 a 0,82, e PE se divide em quatro componentes.
+- **rede esparsa sobreposta** (BA, PI, MG e SE).
+
+Territórios exclusivos são raros, salvo no PR, onde mais da metade dos vínculos está em componentes de uma só organização, e, em parte, em MG (0,23).
+
+**Escassez.** Os dois padrões quase coincidem com a razão entre unidades e organizações. As UFs de pool têm de 2,00 a 4,33 unidades por organização; as esparsas, de 1,29 a 1,43.
+
+**Registro.** Faltam como registradas 0,315 das unidades previstas nas propostas, e a perda se concentra nos projetos grandes.
+
+**Regra documentada.** Na versão de 2026 do manual de operações da CONAB, a lista de cozinhas vem do MDS, e o manual prevê chamada aberta, indicação de fornecedores pela própria cozinha e compra direcionada.
+
+**O que fica em aberto.** Um único ano não permite dizer se os padrões vêm de uma regra própria da UF ou da escassez de fornecedores. Deixamos registrado um teste para quando a planilha trouxer outro ano.
 
 ## 1. Introdução
 
-O Programa de Aquisição de Alimentos (PAA) compra alimentos de organizações da agricultura familiar e os doa a unidades recebedoras. Há regras específicas para as compras destinadas às cozinhas solidárias ao menos desde dezembro de 2023 (Resolução PAA/GG nº 7/2023, lida só por resumo), e o manual de operações da CONAB tem um subtítulo próprio para elas, o PAA–Cozinhas. A literatura sobre o PAA privilegia o lado do fornecedor. Um trabalho sobre unidades recebedoras afirmava, em 2015, não haver estudos sobre elas (Silva e De Lorenzo, 2015; somente resumo lido). Nas bases consultadas, não encontramos estudo sobre a **estrutura dos vínculos** entre organizações e unidades: quantas unidades cada organização atende, se as organizações compartilham unidades e como isso varia entre UFs (`pesquisa/literatura/fontes.md#lacuna`). A busca não incluiu SciELO, BDTD nem relatórios institucionais diretamente. "Não encontrado" vale só para ela.
+O Programa de Aquisição de Alimentos (PAA) compra alimentos de organizações da agricultura familiar e os doa a unidades recebedoras. Há regras específicas para as compras destinadas às cozinhas solidárias ao menos desde dezembro de 2023 (Resolução PAA/GG nº 7/2023, lida só por resumo), e o manual de operações da CONAB tem um subtítulo próprio para elas, o PAA–Cozinhas.
 
-A pergunta tem alcance de gestão. Se a concentração de unidades em poucas organizações vem do desenho administrativo, a alavanca está nas regras das chamadas e das superintendências. Se vem da escassez de organizações aptas, está no recrutamento de mais fornecedores.
+A literatura sobre o PAA privilegia o lado do fornecedor. Um trabalho sobre unidades recebedoras afirmava, em 2015, não haver estudos sobre elas (Silva e De Lorenzo, 2015; somente resumo lido). Nas bases consultadas, não encontramos estudo sobre a **estrutura dos vínculos** entre organizações e unidades (`pesquisa/literatura/fontes.md#lacuna`). A busca não incluiu SciELO, BDTD nem relatórios institucionais diretamente.
 
-## 2. O que a regra documenta
+A pergunta deste trabalho é descritiva:
+- quantas unidades cada organização atende;
+- como os vínculos se organizam em cada UF;
+- quanto do previsto nas propostas aparece registrado.
 
-O Manual de Operações da CONAB, Título 30, subtítulo IV, na versão de 14/05/2026, estabelece que o MDS apresenta à CONAB "uma lista das Cozinhas Solidárias cadastradas e habilitadas" (item 35). Pelas disposições gerais do mesmo manual, a organização fornecedora cadastra as unidades recebedoras e elabora a proposta (itens 3.1 e 3.2). O manual não diz quem atribui cada unidade da lista a cada organização. <!-- rm:ignore: números de item normativo -->
-Para formar os fornecedores de uma cozinha, o manual prevê três formas. Com a demanda mapeada, "a Conab poderá abrir chamada" para propostas das organizações interessadas, e são contratados os projetos que "se declarem aptos com a demanda da cozinha" (itens 36.2 e 37). As cozinhas "se reservam ao direito de indicar potenciais organizações fornecedoras" (item 35.3). E, em casos específicos, a CONAB pode fazer compra direcionada segundo orientações do MDS (item 36.3). <!-- rm:ignore: números de item normativo -->
-Conjecturamos que a chamada aberta tende a produzir pool, porque várias organizações se declaram aptas à demanda de um mesmo conjunto de cozinhas, e que a indicação pela cozinha tende a produzir rede esparsa. Essa ligação é inferência nossa: nenhuma fonte lida informa qual forma cada UF usou.
-Lemos só a versão de 2026. Uma versão anterior (Ato Dipai nº 05/2024) foi localizada, mas não lida, e não verificamos qual versão regia as contratações de 2025. A ata do GGPAA de 29/01/2025 registra que a contratação das propostas exclusivas para cozinhas em 2025 seria feita "em formato ainda a ser apresentado". <!-- rm:ignore: identificação de ato normativo -->
+O retrato interessa à gestão do programa: mostra onde poucas organizações concentram o atendimento e onde o registro está incompleto.
+
+## 2. A regra documentada
+
+O Manual de Operações da CONAB, Título 30, subtítulo IV, na versão de 14/05/2026, estabelece que o MDS apresenta à CONAB "uma lista das Cozinhas Solidárias cadastradas e habilitadas" (item 35). Pelas disposições gerais, a organização fornecedora cadastra as unidades recebedoras e elabora a proposta (itens 3.1 e 3.2). O manual não diz quem atribui cada unidade da lista a cada organização. <!-- rm:ignore: números de item normativo -->
+
+Para formar os fornecedores de uma cozinha, o manual prevê três formas:
+- **chamada aberta:** a CONAB pode abrir chamada sobre a demanda mapeada, e são contratados os projetos que "se declarem aptos com a demanda da cozinha" (itens 36.2 e 37); <!-- rm:ignore: números de item normativo -->
+- **indicação pela cozinha:** as cozinhas podem "indicar potenciais organizações fornecedoras" (item 35.3); <!-- rm:ignore: número de item normativo -->
+- **compra direcionada:** em casos específicos, segundo orientações do MDS (item 36.3). <!-- rm:ignore: número de item normativo -->
+
+Lemos só a versão de 2026. Uma versão anterior (Ato Dipai nº 05/2024) foi localizada, mas não lida. A ata do GGPAA de 29/01/2025 registra que a contratação para cozinhas em 2025 seria feita "em formato ainda a ser apresentado". <!-- rm:ignore: identificação de ato normativo -->
 
 ## 3. Dados
 
-Usamos a planilha pública da CONAB/GEIAF do PAA–Cozinhas, período 2025, num snapshot de 2026-10-14 com hash registrado (`pesquisa/dados/relatorio.md`; números de `pesquisa/agregados/dados.csv`). A planilha traz 280 projetos de 240 organizações (CNPJ) e 1116 linhas de unidades recebedoras. Todas as linhas de unidades encontram projeto, e 0,921 dos projetos têm ao menos uma unidade. O recorte é CDS, o mecanismo em que a organização entrega diretamente: 219 projetos, 206 organizações com vínculo e 705 vínculos distintos (CNPJ, código da cozinha). A medida é o **código da cozinha** registrado, não a cozinha física. 682 vínculos usam códigos CS, 22 usam códigos EG, que reúnem mais de uma cozinha, e 1 usa o marcador "unidade gestora", que não identifica unidade.
+**Fonte.** A planilha pública da CONAB/GEIAF do PAA–Cozinhas, período 2025. É uma planilha única, atualizada à medida que a CONAB acrescenta dados. Usamos um snapshot de 2026-10-14 com hash registrado (`pesquisa/dados/relatorio.md`; números de `pesquisa/agregados/dados.csv`).
+
+**Tamanho e ligação.** A planilha traz 280 projetos de 240 organizações (CNPJ) e 1116 linhas de unidades recebedoras. Todas as linhas de unidades encontram projeto, e 0,921 dos projetos têm ao menos uma unidade.
+
+**Recorte.** CDS, o mecanismo em que a organização entrega diretamente: 219 projetos, 206 organizações com vínculo e 705 vínculos distintos (CNPJ, código da cozinha).
+
+**Medida.** O **código da cozinha** registrado, não a cozinha física. 682 vínculos usam códigos CS, 22 usam códigos EG (que reúnem mais de uma cozinha) e 1 usa o marcador "unidade gestora", que não identifica unidade.
 
 ## 4. Métodos
 
-O **grau** de uma organização é o nº de códigos distintos vinculados aos seus projetos CDS. Para cada UF, montamos o grafo bipartido organização–código e calculamos os seus componentes conexos. A **participação de pool** da UF é a fração dos vínculos que estão em componentes com duas ou mais organizações e densidade de pelo menos metade dos pares possíveis (D-6). Nos resultados por UF (seções 5.2, 5.3 e a perda por UF em 5.4), os vínculos com o marcador "unidade gestora" não entram (D-16). Nos resultados nacionais (5.1, a perda total em 5.4 e 5.5), entram, e há um único vínculo assim. <!-- rm:ignore: limiares de método -->
-Todos os resultados abaixo vêm do mesmo ano em que os padrões foram descobertos, e por isso são exploratórios. As execuções têm recibo (`.research/runs/`). A regeneração byte a byte a partir do código congelado foi verificada à mão para RUN-2, RUN-3 e RUN-4 (D-14; `pesquisa/scripts/replay_manual.sh`) e pela ferramenta de replay para RUN-5 e RUN-6.
+- **Grau.** O grau de uma organização é o nº de códigos distintos vinculados aos seus projetos CDS.
+- **Componentes.** Para cada UF, montamos o grafo bipartido organização–código e os seus componentes conexos.
+- **Participação de pool.** É a fração dos vínculos da UF em componentes com duas ou mais organizações e densidade de pelo menos metade dos pares possíveis (D-6). <!-- rm:ignore: limiar de método -->
+- **Perda.** É a fração das unidades previstas na proposta que não aparecem registradas.
+- **Marcador.** Nos resultados por UF (seção 5.2 e a perda por UF), os vínculos com o marcador "unidade gestora" não entram. Nos resultados nacionais (seção 5.1 e a perda total), entram; há um único vínculo assim.
 
-## 5. Resultados exploratórios (2025)
+Todos os números são um censo do snapshot, sem inferência amostral. As escolhas de medida foram feitas depois de examinar os dados, e isso está registrado (`pesquisa/decisoes.md`, D-2). Os números descrevem 2025 e não testam hipóteses.
 
-### 5.1 Distribuição do grau
+As execuções têm recibo (`.research/runs/RUN-3.json` e `RUN-6.json`) e se regeneram byte a byte a partir do código.
+
+## 5. Resultados
+
+### 5.1 Quantas unidades cada organização atende
 
 Entre as 206 organizações CDS com vínculo, a mediana do grau é 2 e a média é 3,42; nove em cada dez organizações atendem até 9 unidades, e o máximo é 23. A proporção de organizações com uma única unidade é 0,466. <!-- claim:C1 result:R3 -->
 
-### 5.2 Dois padrões de vínculo entre UFs
+### 5.2 Como os vínculos se organizam por UF
 
-Nas onze UFs com ao menos dez unidades e três organizações, a participação de pool separa dois grupos. É de 1,00 em AL, PB, RN e SC e de 0,88 em PE. É de 0,05 em BA, de 0,03 em PI e de 0,00 em MG e SE. PR (0,46) e RS (0,31) ficam entre os dois. <!-- claim:C2 result:R6 -->
-O oposto do pool não é a partição em territórios exclusivos, salvo no PR. Em BA, PI e SE, quase todos os vínculos ficam num único componente grande e pouco denso. Em MG, eles se dividem em quatro componentes (`pesquisa/problem-brief.md`). Chamamos esse padrão de rede esparsa sobreposta.
+Nas onze UFs com ao menos dez unidades e três organizações, a participação de pool separa dois grupos:
+- é de 1,00 em AL, PB, RN e SC e de 0,88 em PE;
+- é de 0,05 em BA, de 0,03 em PI e de 0,00 em MG e SE;
+- PR (0,46) e RS (0,31) ficam entre os dois. <!-- claim:C2 result:R6 -->
+
+Fora o PR, o oposto do pool não é a partição em territórios exclusivos. Em BA, PI e SE, quase todos os vínculos ficam num único componente grande e pouco denso; em MG, eles se dividem em quatro componentes (`pesquisa/problem-brief.md`). Chamamos esse padrão de rede esparsa sobreposta.
+
+**Tabela 1.** UFs com ao menos dez unidades e três organizações, projetos CDS, 2025 (`pesquisa/agregados/h1_data1_ensaio_v4.json`).
+
+| UF | Organizações | Unidades | Vínculos | Unidades por organização | Participação de pool | Perda previsto→registrado |
+|---|---|---|---|---|---|---|
+| AL | 6 | 18 | 71 | 3,00 | 1,00 | 0,11 |
+| PB | 3 | 13 | 32 | 4,33 | 1,00 | 0,00 |
+| RN | 5 | 10 | 35 | 2,00 | 1,00 | 0,00 |
+| SC | 4 | 10 | 22 | 2,50 | 1,00 | 0,24 |
+| PE | 7 | 14 | 33 | 2,00 | 0,88 | 0,67 |
+| PR | 5 | 12 | 13 | 2,40 | 0,46 | 0,19 |
+| RS | 20 | 29 | 72 | 1,45 | 0,31 | 0,61 |
+| BA | 24 | 31 | 109 | 1,29 | 0,05 | 0,25 |
+| PI | 21 | 27 | 117 | 1,29 | 0,03 | 0,01 |
+| MG | 7 | 10 | 13 | 1,43 | 0,00 | 0,32 |
+| SE | 9 | 12 | 22 | 1,33 | 0,00 | 0,12 |
+
+<!-- claim:C9 result:R6 -->
 
 ### 5.3 Os padrões quase coincidem com a escassez
 
 As UFs de pool têm de 2,00 a 4,33 unidades por organização: AL 3,00, PB 4,33, RN 2,00, SC 2,50 e PE 2,00. As de rede esparsa têm de 1,29 a 1,43: BA 1,29, PI 1,29, SE 1,33 e MG 1,43. O RS, intermediário, tem 1,45. A exceção é o PR, com 2,40 unidades por organização e participação de pool de 0,46. <!-- claim:C3 result:R6 -->
-Na classificação binária do plano, em que é pool a UF com participação de pelo menos metade, e com um corte de razão ajustado aos próprios dados de 2025, "regra da UF" e "escassez de organizações" preveem o mesmo padrão em dez das onze UFs. Só o PR diverge. Qualquer corte entre 1,45 e 2,00 dá esse mesmo resultado, por isso 2025 não identifica o corte. <!-- rm:ignore: limiar de método -->
-O ensaio do teste registrado em 2025 (seção 6), com o mesmo ano como alvo e referência, mostra só que o código roda e reproduz as classes de 2025. Nele nenhuma UF pode mudar de lado, e as checagens de inércia ficam triviais. Com dados sintéticos (`pesquisa/testes/`), foram exercitados a regra de faixa, a regra de decisão, a exclusão por exposição, a UF herdada, os bloqueios por hash, rótulo, coluna e projetos já vistos, e um caso de ponta a ponta com três UFs discordantes. Ficaram sem caso sintético a exclusão por K3 e K2 abaixo do mínimo. <!-- claim:C4 result:R6 -->
 
-### 5.4 Perda entre unidades previstas e registradas
+Onde há mais unidades por organização, as organizações tendem a compartilhar as mesmas unidades. Onde há mais organizações para as unidades disponíveis, os vínculos se espalham. Qualquer corte de razão entre 1,45 e 2,00 separa os dois grupos com uma única exceção, o PR. <!-- rm:ignore: faixa descritiva -->
 
-Em nenhum projeto CDS o nº de unidades registradas passa do previsto na proposta. No conjunto, falta 0,315 das unidades previstas. A perda cresce com o tamanho do projeto: é de 0,01 nos projetos que previam uma unidade e de 0,455 nos que previam dez ou mais, que registram 321 das 589 unidades previstas. <!-- claim:C5 result:R3 -->
-Entre as UFs elegíveis, a perda passa de 0,3 em PE (0,67), RS (0,61) e MG (0,32). Por isso o teste registrado exclui essas UFs da população primária (K7, D-12). <!-- claim:C6 result:R6 -->
-A cauda alta do grau, justamente o que se quer explicar, é a parte mais truncada da medida.
+### 5.4 Quanto do previsto aparece registrado
+
+Em nenhum projeto CDS o nº de unidades registradas passa do previsto na proposta. No conjunto, faltam como registradas 0,315 das unidades previstas. A perda cresce com o tamanho do projeto: é de 0,01 nos projetos que previam uma unidade e de 0,455 nos que previam dez ou mais, que registram 321 das 589 unidades previstas. <!-- claim:C5 result:R3 -->
+
+Entre as UFs da Tabela 1, a perda passa de 0,3 em PE (0,67), RS (0,61) e MG (0,32). <!-- claim:C6 result:R6 -->
+
+Como a planilha é atualizada à medida que dados são acrescentados, parte dessa perda pode ser atraso de registro. Com um só snapshot, não é possível separar atraso de corte. A cauda alta do grau é justamente a parte mais afetada.
 
 ### 5.5 Grau e quantidade prevista
 
 Dentro da UF, a elasticidade do grau registrado em relação ao kg previsto é de 0,291, com IC aproximado de 95% de 0,058 a 0,524 (erro-padrão agrupado por UF). Com o grau previsto, é de 0,371 (0,135 a 0,608). <!-- claim:C7 result:R3 -->
-Isso descreve a associação em 2025 e não separa mecanismos. A proposta é montada para atender à demanda das cozinhas (item 37 do manual), e o kg não é comparável entre produtos. Por isso essa análise ficou exploratória desde o plano (D-9). <!-- rm:ignore: número de item normativo -->
 
-## 6. O teste registrado e o seu estado
+Organizações com mais quantidade prevista atendem mais unidades, mas bem menos que proporcionalmente. Isso é descrição: a proposta é montada para atender à demanda das cozinhas (item 37 do manual), e o kg não é comparável entre produtos. <!-- rm:ignore: número de item normativo -->
 
-Antes de obter planilha de outro ano, registramos e congelamos no repositório (registro interno, sem registro externo) a hipótese H1 (`analysis-plan.md#h1`, `pesquisa/registro.md`). Em 2025, qualquer corte de razão entre 1,45 e 2,00 separa os padrões igualmente. Por isso a escassez só faz previsão fora dessa faixa: pool com 2,00 ou mais unidades por organização, rede esparsa com 1,45 ou menos. H1 diz que, nas UFs cuja razão sair da faixa para o lado oposto ao do seu padrão de 2025, o padrão do ano confirmatório segue o de 2025, e não a nova razão. <!-- rm:ignore: faixa da regra registrada -->
-O teste conta, nessas UFs, qual preditor acerta. Ele decide com ao menos três UFs nessa situação e acerto em três quartos delas. Há checagens prévias de esquema, ano, hash, perda de registro (em 2025 e no ano confirmatório), vínculos interestaduais, inércia dos mesmos vínculos e granularidade do código. As sensibilidades são só vínculos novos, banda ambígua da classe, limiares alternativos de escassez e só códigos CS. <!-- rm:ignore: parâmetros da regra registrada -->
-Antes de fixar a regra, vimos uma notícia que dá ao PI, em 2026, uma razão perto de 1,75. O valor cai dentro da faixa, mas, por conservadorismo, o PI sai da população primária se o ano confirmatório for 2026. O PR, que já diverge em 2025, é relatado à parte (D-16, D-17). <!-- rm:ignore: número de notícia, registrado como exposição -->
-**Estado: bloqueado.** A versão atual da planilha só tem linhas de 2025 (`pesquisa/dados/fonte_atual/checagem.json`), e não encontramos planilha pública de outro ano. Com o dado de 2024 ou de 2026 no mesmo formato e o hash registrado antes da abertura, o teste roda sem mudança. Restam no máximo sete UFs utilizáveis, ou seis em 2026, e exige-se que a razão saia da faixa para o lado oposto. O resultado mais provável é inconclusivo. Mesmo que decida, o teste só dirá, para essas UFs, se o padrão persiste ou acompanha a nova razão. Ele não dirá se a persistência vem da forma de seleção administrativa ou de outra característica estável da UF.
+## 6. Discussão e o que fica em aberto
+
+O retrato de 2025 mostra que a concentração de unidades em poucas organizações não é homogênea entre UFs. Nas UFs com poucas organizações para as unidades habilitadas, cada organização atende boa parte das mesmas cozinhas. Nas UFs com mais organizações, cada uma atende poucas cozinhas, e os conjuntos se sobrepõem parcialmente.
+
+Duas explicações são compatíveis com esse retrato. Ou a escassez de fornecedores força cada organização a atender muitas cozinhas, ou a forma de montar as propostas em cada UF produz o padrão. Pelo manual, essa forma pode ser chamada aberta, indicação pela cozinha ou compra direcionada. Como os padrões quase coincidem com a razão unidades/organizações, os dados de um só ano não separam as duas explicações. A ligação entre as formas do manual e os padrões é inferência nossa: nenhuma fonte lida diz qual forma cada UF usou.
+
+Para quando a planilha trouxer outro ano, deixamos registrado e congelado um teste. Ele olha as UFs cuja razão sair da faixa entre 1,45 e 2,00 para o lado oposto ao do seu padrão e verifica se o padrão persiste ou acompanha a nova razão (`analysis-plan.md#h1`, `pesquisa/registro.md`). Com poucas UFs, o mais provável é que esse teste seja inconclusivo. Mesmo que decida, não dirá se a persistência vem da forma administrativa ou de outra característica estável da UF. <!-- rm:ignore: faixa da regra registrada -->
 
 ## 7. Limitações
 
-- Todos os resultados vêm de um único ano, já explorado antes desta análise, e nenhum é confirmatório.
-- A medida conta códigos registrados, não cozinhas físicas. Os códigos EG reúnem várias cozinhas. No PR, a única UF em que regra e escassez divergem em 2025, 0,231 dos vínculos usam códigos EG, acima do limite da checagem de granularidade do plano. Só com códigos CS, o PR tem 3,33 unidades por organização e participação de pool de 0,00, e continua sendo uma UF esparsa com razão alta. <!-- claim:C8 result:R6 -->
-- O registro é incompleto, sobretudo nos projetos grandes e em PE, RS e MG.
-- Em SE e MG, mais de 5% dos vínculos vão para unidades de outra UF. <!-- rm:ignore: limite da checagem K4 -->
-- A regra lida é a versão de 2026 do manual, e a Resolução PAA/GG nº 7/2023 foi lida só por resumo.
-- A literatura acadêmica foi lida só nos resumos.
-- A ligação entre forma de seleção e padrão de vínculo é inferência.
-- O registro do teste é interno ao repositório, não externo. Ele foi reaberto três vezes antes de qualquer dado de outro ano (D-12, D-16, D-17), as duas últimas por revisões adversariais.
-- Números de notícias de 2025, de 2026 e de ano não verificado foram vistos antes do registro (`pesquisa/literatura/busca.md`).
+- Um único ano, com escolhas de medida feitas depois de examinar os dados. A descrição vale para o snapshot de 2025.
+- **Medida.**
+  - Conta códigos registrados, não cozinhas físicas, e os códigos EG reúnem várias cozinhas.
+  - No PR, a única UF fora da coincidência entre padrão e escassez, 0,231 dos vínculos usam códigos EG. Só com códigos CS, o PR tem 3,33 unidades por organização e participação de pool de 0,00, e continua sendo uma UF esparsa com razão alta. <!-- claim:C8 result:R6 -->
+- **Registro.**
+  - É incompleto, sobretudo nos projetos grandes e em PE, RS e MG.
+  - A planilha muda com o tempo; outro snapshot pode dar números diferentes.
+- **Vínculos interestaduais.** Em SE e MG, mais de 5% dos vínculos vão para unidades de outra UF. <!-- rm:ignore: limite da checagem K4 -->
+- **Fontes lidas.**
+  - A regra lida é a versão de 2026 do manual.
+  - A Resolução PAA/GG nº 7/2023 e a literatura acadêmica foram lidas só por resumo.
+- **Exposição.** Números de notícias de 2025, de 2026 e de ano não verificado foram vistos durante a pesquisa (`pesquisa/literatura/busca.md`).
 
 ## 8. Conclusão
 
-Em 2025, as organizações do PAA–Cozinhas se ligam às unidades de dois modos que variam por UF: um pool denso, em que as organizações compartilham boa parte das mesmas unidades, e uma rede esparsa sobreposta. Esses padrões quase coincidem com a escassez de organizações, e os dados de um só ano não dizem qual explicação vale. Com um segundo ano da mesma planilha, o teste registrado pode dizer, nas UFs cuja razão sair da faixa observada em 2025 para o lado oposto, se o padrão persiste ou acompanha a nova razão. Com poucas UFs, ele tende a ser inconclusivo.
+Em 2025, a maioria das organizações fornecedoras do PAA–Cozinhas atende poucas unidades, e poucas atendem muitas. O modo como se ligam às cozinhas varia por UF. Onde há poucas organizações para as unidades habilitadas, elas compartilham boa parte das mesmas cozinhas. Onde há mais organizações, os vínculos se espalham numa rede esparsa. Cerca de um terço das unidades previstas nas propostas não aparece registrado, sobretudo nos projetos grandes. Por que os padrões diferem entre UFs fica em aberto, com um teste registrado para o próximo ano de dados.
 
 ## Referências
 
@@ -90,5 +159,5 @@ As demais fontes consultadas e o nível de leitura estão em `pesquisa/literatur
 
 ## Declarações
 
-- Dados e código: `pesquisa/dados/`, `pesquisa/scripts/`, `pesquisa/agregados/` e `.research/runs/`. A licença de reuso da planilha da CONAB não foi verificada.
-- Uso de IA: a análise, o código e este texto foram produzidos com assistência de um modelo de linguagem (Claude). A forma da declaração exigida pela venue é decisão humana.
+- **Dados e código:** `pesquisa/dados/`, `pesquisa/scripts/`, `pesquisa/agregados/` e `.research/runs/`. A licença de reuso da planilha da CONAB não foi verificada.
+- **Uso de IA:** a análise, o código e este texto foram produzidos com assistência de um modelo de linguagem (Claude). A forma da declaração exigida pela venue é decisão humana.

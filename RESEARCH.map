@@ -9,7 +9,7 @@
 - references: pesquisa/referencias.bib
 
 ## Question
-Por que algumas organizações fornecedoras de projetos CDS do PAA–Cozinhas atendem muito mais unidades: regra de montagem da UF (pool) ou escassez local? → `pesquisa/protocolo.md#question`
+Como as organizações fornecedoras de projetos CDS do PAA–Cozinhas se ligam às unidades recebedoras em 2025 (descritivo; a pergunta explicativa segue como H1, bloqueada) → `pesquisa/protocolo.md#question`
 Problem: SHOWN → `pesquisa/problem-brief.md`
 Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 2026-10-21 (sem registro externo; D-10)
 
@@ -22,13 +22,13 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 ## Gates
 | Phase | State | Blocked by | Evidence |
 |---|---|---|---|
-| 1A Problem — formulate | reached | | `pesquisa/decisoes.md#d-4` · `pesquisa/exploracao/2026-10-21-explorer.md` · `pesquisa/protocolo.md#question` · `pesquisa/decisoes.md#d-5` |
+| 1A Problem — formulate | reached | | `pesquisa/decisoes.md#d-22` · `pesquisa/decisoes.md#d-4` · `pesquisa/exploracao/2026-10-21-explorer.md` · `pesquisa/protocolo.md#question` · `pesquisa/decisoes.md#d-5` |
 | 1B Problem — establish | reached | | `pesquisa/problem-brief.md` · `pesquisa/decisoes.md#d-7` |
 | 2 Literature | reached | | `pesquisa/literatura/busca.md` · `pesquisa/literatura/fontes.md#lacuna` · `pesquisa/decisoes.md#d-8` |
 | 3 Protocol | reached | | `pesquisa/protocolo.md#compromissos-congelados` · `analysis-plan.md` · `pesquisa/registro.md` · `pesquisa/decisoes.md#d-10` · `pesquisa/decisoes.md#d-12` · `pesquisa/decisoes.md#d-16` · `pesquisa/decisoes.md#d-17` · `pesquisa/decisoes.md#d-18` |
 | 4 Data | reached | | `pesquisa/dados/relatorio.md` · `pesquisa/agregados/dados.csv` · `pesquisa/decisoes.md#d-11` |
 | 5 Analysis | reached | | `.research/runs/RUN-2.json` · `.research/runs/RUN-3.json` · `.research/runs/RUN-4.json` · `.research/runs/RUN-5.json` · `.research/runs/RUN-6.json` · `pesquisa/agregados/h2_data1.json` · `pesquisa/decisoes.md#d-14` · `pesquisa/decisoes.md#d-15` |
-| 6 Writing | reached | | `pesquisa/texto/artigo.md` |
+| 6 Writing | reached | | `pesquisa/texto/artigo.md` · `pesquisa/decisoes.md#d-22` |
 | 7 Review | reached | | `.research/reviews/REVIEW-4.md` · `.research/reviews/REVIEW-3.md` · `.research/reviews/REVIEW-1-respostas.md` · `.research/reviews/REVIEW-2-respostas.md` · `pesquisa/decisoes.md#d-18` |
 | 8 Publication | blocked | decisões humanas (forma de publicação, venue, autoria, licença, ética, registro externo) e DATA2 para H1 | `pesquisa/publicacao.md` · `pesquisa/decisoes.md#d-20` |
 
@@ -55,4 +55,5 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 - 2026-10-21: REVIEW-3 = PASS (9f123f4); sete achados menores corrigidos (D-18): hash completo, teste com 23 casos e textos alinhados
 - 2026-10-21: REVIEW-4 PASS; ajustes triviais (D-19); PUBLISH preflight bloqueado em decisões humanas (D-20)
 - 2026-10-21: informação humana: a planilha da CONAB é única e muda com o tempo; DATA2 será uma versão futura com outro ano (D-21)
-- Next: checar periodicamente a planilha só com checa_fonte.py; ao surgir outro ano, commitar DATA2.sha256 antes de abrir; decidir venue, autoria e licença
+- 2026-10-21: escopo passa a descritivo por decisão humana (D-22); manuscrito reescrito como retrato descritivo de 2025, com H1 como trabalho futuro
+- Next: REVIEW-5 (reviewer-2) do manuscrito descritivo; depois, decisões de publicação
