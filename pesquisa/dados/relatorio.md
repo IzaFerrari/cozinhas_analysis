@@ -48,4 +48,4 @@ O que foi verificado em 2026-10-21, sem abrir desfechos:
 
 Exposições ligadas a um possível DATA2: números de notícias de 2026 (PI), de ano não verificado (RS) e de 2025 (PR), registrados em `busca.md`. Nenhum é o desfecho de H1.
 
-Consequência: H1 não pode ser executada. O estado é `BLOCKED` até que DATA2 seja identificado (D-11). A entrada exige: (1) obter a planilha de outro ano junto à CONAB/GEIAF, pelo Fala.BR ou com a orientação acadêmica; (2) registrar procedência e hash **antes** de qualquer leitura; (3) rodar `pesquisa/scripts/h1_confirmatorio.py` sem mudanças, seguindo o contrato de execução.
+Consequência: H1 não pode ser executada. O estado é `BLOCKED` até que DATA2 seja identificado (D-11). Atualização (D-21): só existe esta planilha, e ela muda quando a CONAB acrescenta dados. A entrada é: (1) verificar periodicamente a versão atual só com `checa_fonte.py` (abas, valores de `ANO`, nº de linhas); (2) quando aparecerem linhas de outro ano, exportar as abas desse ano, gravar e commitar `pesquisa/dados/DATA2.sha256` **antes** de qualquer leitura; (3) rodar `pesquisa/scripts/h1_confirmatorio.py` sem mudanças, seguindo o contrato de execução.

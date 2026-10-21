@@ -32,7 +32,7 @@ Data: 2026-10-21. Alvo: o manuscrito de trabalho `pesquisa/texto/artigo.md` (com
 | Licença do texto, do código e dos agregados; se as cópias brutas da planilha da CONAB podem ser redistribuídas | jurídica e institucional | pendente; licença da fonte não verificada |
 | Necessidade de apreciação ética (CEP) | institucional. Os dados são administrativos públicos sobre pessoas jurídicas, sem colunas pessoais usadas, mas a decisão não é do assistente | pendente |
 | Registro externo do teste de H1 (OSF ou outro) antes de abrir DATA2 | publicaria o protocolo fora do repositório | pendente (D-10) |
-| Obter DATA2 (planilha de 2024 ou 2026) junto à CONAB/GEIAF ou pela orientação | acesso a dados | pendente (D-11) |
+| DATA2: esperar que a planilha única da CONAB ganhe linhas de outro ano (D-21) | depende da CONAB | pendente (D-11, D-21) |
 
 ## Estado
 

@@ -171,3 +171,14 @@ Revision condition: não revisável; é ajuste de texto e de teste.
 O preflight (`pesquisa/publicacao.md`) atende aos requisitos verificáveis no repositório: linhagem, números, revisão separada atual (REVIEW-3 e REVIEW-4 PASS), nenhum FAIL material em aberto, regeneração e NOT_VERIFIED declarados. A publicação fica bloqueada nas decisões humanas listadas: forma de publicação com H1 `BLOCKED`, venue, autoria, licença e redistribuição da fonte, ética, registro externo e obtenção de DATA2. Nada foi publicado.
 Rationale: limite de autoridade; venue, autoria, ética e licença não são decisões do assistente.
 Revision condition: cada decisão humana registrada em bloco novo; DATA2 obtido reabre a fase 4 e o FIT de H1.
+
+### D-21 · 2026-10-21 · Informação humana: a planilha da CONAB é única e muda à medida que dados são acrescentados
+Informação de quem conduz a pesquisa (IzaFerrari, 2026-10-21): só existe esta planilha. Não há arquivo separado de outro ano, e ela muda a cada vez que a CONAB acrescenta dados.
+Consequências, sem mudar o plano congelado (D-18):
+1. DATA2 não virá de outro arquivo. Virá de uma **versão futura desta mesma planilha** que traga linhas de outro ano, por exemplo numa aba nova como `CONTRATAÇÕES 2026`. O plano já admite isso ("outro ano do PAA–Cozinhas, na mesma planilha CONAB e com o mesmo esquema"). O código filtra por `ANO`, exclui os projetos já presentes em DATA1 e exige o hash commitado antes da leitura.
+2. Procedimento para detectar a mudança sem expor o conteúdo: baixar a versão atual e rodar só `pesquisa/scripts/checa_fonte.py` (nomes das abas, valores distintos de `ANO`, nº de linhas). Se aparecer outro ano, exportar as abas desse ano em CSV, gravar `pesquisa/dados/DATA2.sha256` e commitar antes de qualquer outra leitura. Uma aba nova pode ter cabeçalho em outra linha, e o código localiza o cabeçalho pela coluna-chave.
+3. Linhas novas de 2025 acrescentadas depois de DATA1 (projetos novos ou unidades novas em projetos antigos) **não** são DATA2 pelo plano atual, que exige outro ano. Usá-las como teste exigiria uma decisão antes de vê-las (REOPEN ou hipótese nova).
+4. A perda previsto→registrado (0,315) pode ser, em parte, atraso de registro numa planilha viva. A informação torna essa leitura plausível, mas não a demonstra. Uma versão futura que preencha unidades de projetos de DATA1 seria a observação discriminante da linhagem 2 (atraso × corte). Isso ainda não está registrado como hipótese.
+5. O notebook `analise.ipynb` lê a planilha online, e os números dele podem mudar a cada atualização. Os números desta pesquisa vêm do snapshot congelado DATA1 (D-1) e não mudam.
+Rationale: lei 1. A natureza da fonte é um fato de domínio que veio de quem conduz a pesquisa.
+Revision condition: informação da CONAB sobre como e quando a planilha é atualizada.

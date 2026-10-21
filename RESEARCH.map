@@ -54,4 +54,5 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 - 2026-10-21: teste sintético (16 casos), RUN-6 (replay EXACT), manuscrito revisado e respostas à REVIEW-2
 - 2026-10-21: REVIEW-3 = PASS (9f123f4); sete achados menores corrigidos (D-18): hash completo, teste com 23 casos e textos alinhados
 - 2026-10-21: REVIEW-4 PASS; ajustes triviais (D-19); PUBLISH preflight bloqueado em decisões humanas (D-20)
-- Next: obter a planilha CONAB PAA–Cozinhas de 2024 ou 2026 (DATA2) e commitar o hash antes de abrir; decidir venue, autoria e licença
+- 2026-10-21: informação humana: a planilha da CONAB é única e muda com o tempo; DATA2 será uma versão futura com outro ano (D-21)
+- Next: checar periodicamente a planilha só com checa_fonte.py; ao surgir outro ano, commitar DATA2.sha256 antes de abrir; decidir venue, autoria e licença
