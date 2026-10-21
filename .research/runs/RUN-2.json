@@ -1,0 +1,16 @@
+{
+  "id": "RUN-2",
+  "mode": "exploratory",
+  "hypothesis": "H1",
+  "estimand": "E1",
+  "test": "T1",
+  "execution_freeze": "09b4cf7",
+  "commit": "445fabf",
+  "note": "Recibo corrigido da mesma execução descrita em .research/runs/retirados/RUN-1.json (D-13): DATA1 identificado pelo diretório do snapshot, um único conteúdo. Ensaio em amostra do código de H1 congelado em cd2a582 (antes do REOPEN da D-12), com DATA1 como alvo e referência. Não é teste de H1.",
+  "inputs": [{"id": "DATA1", "path": "pesquisa/dados/brutos", "role": "discovery"}],
+  "outputs": [{"result": "R2", "artifact": "pesquisa/agregados/h1_data1_em_amostra.json"}],
+  "replay": {
+    "command": [".venv/bin/python", "-I", "pesquisa/scripts/h1_confirmatorio.py", "pesquisa/dados/brutos", "pesquisa/dados/brutos", "pesquisa/agregados/h1_data1_em_amostra.json"],
+    "environment": ["pesquisa/requirements.txt"]
+  }
+}

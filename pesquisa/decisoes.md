@@ -100,3 +100,9 @@ Mudança: acrescenta A7/K7 a H1. A UF cuja perda em DATA1 seja > 0,3 sai da popu
 Transparência: a mudança foi motivada por um diagnóstico de DATA1 visto depois do congelamento da D-10, e **antes** de qualquer exposição a DATA2, que continua não identificado (D-11). DATA1 já constava em `Generated from`. O novo congelamento é o commit que traz este bloco; o congelamento anterior (cd2a582) fica no histórico.
 Rationale: lei 2. A mudança é registrada antes da exposição ao dado confirmatório, e o limite é o mesmo já fixado para DATA2.
 Revision condition: mudança só por bloco novo com `Supersedes: D-12`, antes de abrir DATA2.
+
+### D-13 · 2026-10-21 · Recibo de RUN-1 retirado por defeito de identidade; RUN-2 o substitui
+O recibo `RUN-1` (commit 3b14a99) declarava DATA1 duas vezes, com um caminho para cada CSV. O contrato pede um id por conteúdo commitado, e o validador reprova o recibo (`runs`: "DATA1 maps to multiple committed input contents"). Recibos são só de acréscimo, então ele não foi editado nem apagado. Foi movido sem mudança para `.research/runs/retirados/RUN-1.json`, fora da leitura do validador, e continua no histórico.
+`RUN-2` descreve a **mesma execução** (execution freeze 09b4cf7, run commit 445fabf, mesma saída), com DATA1 identificado pelo diretório `pesquisa/dados/brutos` (um único tree no git) e resultado `R2`. `R1` não é usado em nenhum texto.
+Rationale: lei 1. A correção recebe identidade nova, e a execução e a saída não mudam.
+Revision condition: não revisável; é registro histórico.
