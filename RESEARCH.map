@@ -23,7 +23,7 @@ Registration: none
 | 1A Problem — formulate | reached | | `pesquisa/decisoes.md#d-1` · `pesquisa/exploracao/2026-10-14-explorer.md` · `pesquisa/protocolo.md#question` |
 | 1B Problem — establish | reached | | `pesquisa/problem-brief.md` |
 | 2 Literature | reached | | `pesquisa/literatura/fontes.md#lacuna` · `pesquisa/literatura/busca.md` |
-| 3 Protocol | pending | | |
+| 3 Protocol | reached | | `pesquisa/protocolo.md#compromissos-congelados` · `pesquisa/decisoes.md#d-6` |
 | 4 Data | pending | | |
 | 5 Analysis | pending | | |
 | 6 Writing | pending | | |
@@ -40,4 +40,5 @@ Registration: none
 ## Last session
 - 2026-10-14: pesquisa iniciada; 1A alcançado (D-1 a D-3, exploração, enunciado do problema); 1B alcançado com premissa SHOWN em quatro medidas (D-5); DATA1 registrado como já exposto (D-4)
 - 2026-10-14: fase 2 alcançada — oito consultas no Consensus, sete fontes lidas só no resumo; lacuna registrada com os limites da busca
-- Next: fase 3 — redigir o protocolo descritivo (estimandos, medidas de D-3, estratificações e fronteira de interpretação) e congelá-lo
+- 2026-10-21: fase 3 alcançada — protocolo descritivo congelado (D-6): estimandos E1–E3, sensibilidades S1–S3, saídas e fronteira de interpretação; sem hipóteses; registro externo: nenhum
+- Next: fase 4 — relatório de dados: proveniência e hash de DATA1, qualidade da ligação projeto–unidade, população analítica e a objeção de granularidade do código
