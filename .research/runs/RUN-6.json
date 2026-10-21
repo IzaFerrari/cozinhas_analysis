@@ -1,0 +1,16 @@
+{
+  "id": "RUN-6",
+  "mode": "exploratory",
+  "hypothesis": "H1",
+  "estimand": "E1",
+  "test": "T1",
+  "execution_freeze": "97f7ee0",
+  "commit": "614f1bd",
+  "note": "Ensaio em amostra (modo 2025-ensaio) do código de H1 congelado na D-17 (546159c), com DATA1 como alvo e referência. Verifica que o código roda e reproduz as classes de DATA1, e relata o PR herdado (também só-CS). Os ramos novos estão cobertos pelo teste sintético (pesquisa/testes/). Não é teste de H1 (D-2).",
+  "inputs": [{"id": "DATA1", "path": "pesquisa/dados/brutos", "role": "discovery"}],
+  "outputs": [{"result": "R6", "artifact": "pesquisa/agregados/h1_data1_ensaio_v4.json"}],
+  "replay": {
+    "command": ["/home/izaferrari/cozinhas/.venv/bin/python", "-I", "pesquisa/scripts/h1_confirmatorio.py", "pesquisa/dados/brutos", "pesquisa/dados/brutos", "pesquisa/agregados/h1_data1_ensaio_v4.json", "2025-ensaio"],
+    "environment": ["pesquisa/requirements.txt"]
+  }
+}
