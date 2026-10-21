@@ -166,3 +166,8 @@ Revision condition: mudança só por bloco novo com `Supersedes: D-18`, antes de
 A REVIEW-4 (`.research/reviews/REVIEW-4.md`) deu PASS no diff da D-18. Ajustes: "utilizáveis" no E1 do protocolo com o sentido da D-18; o item 3 do registro com todas as notícias vistas; a frase da assimetria no plano corrigida para AL; o teste sintético agora confere que T2, T3, T4 e T5 têm os três discordantes e que K5 foi calculada (25 casos, todos passando). Nada muda em estimando, população, desfecho, preditores, faixa, regra de decisão ou código congelado.
 Rationale: lei 5.
 Revision condition: não revisável; é ajuste de texto e de teste.
+
+### D-20 · 2026-10-21 · Fase 8: PUBLISH preflight bloqueado em decisões humanas
+O preflight (`pesquisa/publicacao.md`) atende aos requisitos verificáveis no repositório: linhagem, números, revisão separada atual (REVIEW-3 e REVIEW-4 PASS), nenhum FAIL material em aberto, regeneração e NOT_VERIFIED declarados. A publicação fica bloqueada nas decisões humanas listadas: forma de publicação com H1 `BLOCKED`, venue, autoria, licença e redistribuição da fonte, ética, registro externo e obtenção de DATA2. Nada foi publicado.
+Rationale: limite de autoridade; venue, autoria, ética e licença não são decisões do assistente.
+Revision condition: cada decisão humana registrada em bloco novo; DATA2 obtido reabre a fase 4 e o FIT de H1.

@@ -30,7 +30,7 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 | 5 Analysis | reached | | `.research/runs/RUN-2.json` · `.research/runs/RUN-3.json` · `.research/runs/RUN-4.json` · `.research/runs/RUN-5.json` · `.research/runs/RUN-6.json` · `pesquisa/agregados/h2_data1.json` · `pesquisa/decisoes.md#d-14` · `pesquisa/decisoes.md#d-15` |
 | 6 Writing | reached | | `pesquisa/texto/artigo.md` |
 | 7 Review | reached | | `.research/reviews/REVIEW-4.md` · `.research/reviews/REVIEW-3.md` · `.research/reviews/REVIEW-1-respostas.md` · `.research/reviews/REVIEW-2-respostas.md` · `pesquisa/decisoes.md#d-18` |
-| 8 Publication | pending | | |
+| 8 Publication | blocked | decisões humanas (forma de publicação, venue, autoria, licença, ética, registro externo) e DATA2 para H1 | `pesquisa/publicacao.md` · `pesquisa/decisoes.md#d-20` |
 
 ## Deferred
 - 2026-10-21: Economia de rota (aglomeração da demanda) — enters when: houver cadastro externo das cozinhas por município e um desfecho independente de DATA1 (D-5)
@@ -53,4 +53,5 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 - 2026-10-21: REVIEW-2 = FAIL (N1, N2 materiais); REOPEN de H1 com faixa de escassez e correções do código (D-17)
 - 2026-10-21: teste sintético (16 casos), RUN-6 (replay EXACT), manuscrito revisado e respostas à REVIEW-2
 - 2026-10-21: REVIEW-3 = PASS (9f123f4); sete achados menores corrigidos (D-18): hash completo, teste com 23 casos e textos alinhados
-- Next: fase 8 — PUBLISH preflight; depende de decisões humanas (venue, autoria, licença, ética, declaração de IA) e, para H1, de DATA2
+- 2026-10-21: REVIEW-4 PASS; ajustes triviais (D-19); PUBLISH preflight bloqueado em decisões humanas (D-20)
+- Next: obter a planilha CONAB PAA–Cozinhas de 2024 ou 2026 (DATA2) e commitar o hash antes de abrir; decidir venue, autoria e licença
