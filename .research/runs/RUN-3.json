@@ -1,0 +1,16 @@
+{
+  "id": "RUN-3",
+  "mode": "exploratory",
+  "hypothesis": "H2",
+  "estimand": "E2",
+  "test": "T6",
+  "execution_freeze": "ed30fa0",
+  "commit": "5218101",
+  "note": "H2 exploratória (D-9): elasticidade grau–kg dentro da UF em DATA1 (T6, T7), distribuição do grau e perda previsto→registrado por faixa.",
+  "inputs": [{"id": "DATA1", "path": "pesquisa/dados/brutos", "role": "discovery"}],
+  "outputs": [{"result": "R3", "artifact": "pesquisa/agregados/h2_data1.json"}],
+  "replay": {
+    "command": [".venv/bin/python", "-I", "pesquisa/scripts/h2_exploratorio.py", "pesquisa/dados/brutos", "pesquisa/agregados/h2_data1.json"],
+    "environment": ["pesquisa/requirements.txt"]
+  }
+}
