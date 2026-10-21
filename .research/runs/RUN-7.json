@@ -1,0 +1,16 @@
+{
+  "id": "RUN-7",
+  "mode": "exploratory",
+  "hypothesis": "H3",
+  "estimand": "E4",
+  "test": "T8",
+  "execution_freeze": "3af5c09",
+  "commit": "ecf8ecc",
+  "note": "Descrição censitária da estrutura organização–unidade por UF em DATA1 (D-23): medidas que não dependem do tamanho e associação da participação de pool com o nº de organizações e a razão.",
+  "inputs": [{"id": "DATA1", "path": "pesquisa/dados/brutos", "role": "discovery"}],
+  "outputs": [{"result": "R7", "artifact": "pesquisa/agregados/descricao_uf.json"}],
+  "replay": {
+    "command": ["/home/izaferrari/cozinhas/.venv/bin/python", "-I", "-B", "pesquisa/scripts/descricao.py", "pesquisa/dados/brutos", "pesquisa/agregados/descricao_uf.json"],
+    "environment": ["pesquisa/requirements.txt"]
+  }
+}
