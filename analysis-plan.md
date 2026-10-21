@@ -15,10 +15,10 @@ Generated from: DATA1
 ### Design
 
 Claim type: associational
-Population: UFs elegíveis no ano confirmatório (DATA2) que também foram elegíveis em DATA1, sem as excluídas por K3 (DATA2) e K7 (DATA1, D-12). Elegível é a UF (da organização) com ≥ 10 códigos de cozinha vinculados a projetos CDS e ≥ 3 organizações com vínculo. Em DATA1 são AL, BA, MG, PB, PE, PI, PR, RN, RS, SC e SE.
+Population: UFs elegíveis no ano confirmatório (DATA2) que também foram elegíveis em DATA1. Exclusões na ordem fixa (D-16): K7 (perda em DATA1 > 0,3: MG, PE e RS), K3 (perda em DATA2 > 0,3) e UFs cuja razão do ano confirmatório foi vista antes do congelamento (PI, se DATA2 for 2026). As UFs que restam são as utilizáveis. Em DATA2 só entram linhas com `ANO` igual ao ano confirmatório e projetos ausentes de DATA1. Vínculos só com códigos `CS<n>` ou `EG<n>`, e CNPJ normalizado para dígitos. Elegível é a UF (da organização) com ≥ 10 códigos de cozinha vinculados a projetos CDS e ≥ 3 organizações com vínculo. Em DATA1 são AL, BA, MG, PB, PE, PI, PR, RN, RS, SC e SE.
 Exposure: dois preditores da classe de regime de cada UF em DATA2, fixados antes de abrir DATA2. (a) Persistência: a classe da UF em DATA1 (tabela abaixo). (b) Escassez: pool se a razão unidades/organizações da UF em DATA2 for ≥ 1,725, esparsa caso contrário.
 Outcome: classe de regime da UF em DATA2. É pool se a participação de pool for ≥ 0,5. A participação de pool é a fração dos vínculos organização–código da UF que estão em componentes conexos com ≥ 2 organizações e densidade ≥ 0,5 (D-6).
-Contrast: nas UFs discordantes (preditores (a) e (b) diferentes), a proporção em que a classe observada em DATA2 coincide com (a), contra a proporção em que coincide com (b).
+Contrast: nas UFs discordantes, a proporção em que a classe observada em DATA2 coincide com (a), contra a proporção em que coincide com (b). Discordante (D-16) é a UF utilizável cuja classe de escassez **muda entre DATA1 e DATA2**, porque a razão cruza 1,725, e cuja nova classe de escassez difere da classe de DATA1. Uma UF que já era discordante em DATA1 e continua do mesmo lado do limiar (o PR) não conta: é relatada à parte.
 Time: DATA1 = contratações de 2025 (snapshot de 2026-10-14); DATA2 = outro ano do PAA–Cozinhas (2024 ou 2026), na mesma planilha CONAB e com o mesmo esquema, com o snapshot identificado na fase 4 antes de abrir.
 Identification: associacional. Não há identificação causal da rota administrativa: a persistência de classe é compatível com qualquer característica estável da UF (rota de montagem das propostas, MOC Título 30 itens 35.3 e 36.2; tamanho; geografia).
 Dependence: a unidade é a UF. DATA1 e DATA2 da mesma UF são dependentes por desenho, e é essa dependência que se testa. A dependência entre UFs, por organizações que atendem unidades de outra UF, é pequena em DATA1 e é checada em K4. Não há inferência amostral: o teste é uma contagem sobre um censo administrativo. Com 3 a 6 UFs discordantes nenhum procedimento dá precisão alta, e a probabilidade binomial exata de um acerto tão bom ou melhor sob p = 0,5 é relatada como qualificador obrigatório, nunca como regra de decisão.
@@ -32,28 +32,32 @@ Classes de DATA1 congeladas (`pesquisa/agregados/problema.csv`, P2):
 | RN | 1,00 | 2,00 | pool |
 | SC | 1,00 | 2,50 | pool |
 | PE | 0,88 | 2,00 | pool |
-| PR | 0,43 | 2,17 | esparsa |
+| PR | 0,46 | 2,40 | esparsa |
 | RS | 0,31 | 1,45 | esparsa |
 | BA | 0,05 | 1,29 | esparsa |
 | PI | 0,03 | 1,29 | esparsa |
 | MG | 0,00 | 1,43 | esparsa |
 | SE | 0,00 | 1,33 | esparsa |
 
-Limiar de escassez, por regra: em DATA1, os limiares de razão que minimizam os erros de classificação formam o intervalo (1,45; 2,00], com um único erro (PR). O limiar é o ponto médio, 1,725. Ele foi derivado de DATA1 (`Generated from`). A notícia sobre o PI em 2026, que dá uma razão perto de 1,75, foi vista antes desta regra (`pesquisa/literatura/busca.md`); por isso há a sensibilidade T4.
+Valores recalculados com a regra de código da D-16: só o PR muda; antes eram 0,43 e 2,17, porque uma organização só tinha o marcador "unidade gestora".
+
+Limiar de escassez, por regra: em DATA1, os limiares de razão que minimizam os erros de classificação formam o intervalo (1,45; 2,00], com um único erro (PR). O limiar é o ponto médio, 1,725. Ele foi derivado de DATA1 (`Generated from`). A notícia sobre o PI em 2026, que dá uma razão perto de 1,75, foi vista antes desta regra (`pesquisa/literatura/busca.md`). O ponto médio fica logo abaixo desse valor, o que tornaria o PI discordante se DATA2 for 2026. Por isso o PI sai da população primária nesse caso (D-16), e há a sensibilidade T4.
+
+Consequência declarada: com K7 (D-12), saem PE (razão 2,00) e RS (1,45), as UFs mais próximas do limiar. Com a exigência de cruzamento, a população utilizável máxima é de oito UFs, ou sete se DATA2 for 2026, e o resultado mais provável é INCONCLUSIVE. Esse é o custo honesto da D-7.
 
 ### Decision rule
 
 CONFIRMED when: há ≥ 3 UFs discordantes na população primária e a classe de DATA2 coincide com a de DATA1 em ≥ 75% delas.
 REFUTED when: há ≥ 3 UFs discordantes na população primária e a classe de DATA2 coincide com a prevista pela escassez em ≥ 75% delas.
-INCONCLUSIVE when: há menos de 3 UFs discordantes (a colinearidade persiste, D-7), nenhuma das duas proporções chega a 75%, ou K2 falha.
+INCONCLUSIVE when: há menos de 3 UFs discordantes, isto é, poucas UFs cruzam o limiar entre os anos e a colinearidade persiste (D-7); ou nenhuma das duas proporções chega a 75%; ou K2 falha.
 BLOCKED when: DATA2 não foi identificado ou K1 falha.
 
 ### Assumptions
 
 | ID | Assumption | Check | Failure action |
 |---|---|---|---|
-| A1 | DATA2 tem o mesmo esquema de DATA1: colunas de projeto, CNPJ, UF da organização, mecanismo CDS, previsto, nº TPAF e código da cozinha; e "CDS" designa o mesmo mecanismo | K1 | BLOCKED: o script para sem resultado |
-| A2 | Há ao menos 6 UFs elegíveis nos dois anos | K2 | INCONCLUSIVE, com o motivo registrado |
+| A1 | DATA2 tem o mesmo esquema de DATA1 (colunas de projeto, CNPJ, UF da organização, mecanismo, previsto, nº TPAF, código da cozinha e ANO); os rótulos de mecanismo estão contidos em {CDS, CDAF, CI}; há vínculos CDS no ano confirmatório; o sha256 dos dois arquivos confere com o registrado em `decisoes.md` antes de abrir | K1 | BLOCKED: o script para sem resultado |
+| A2 | Há ao menos 6 UFs utilizáveis, depois das exclusões K7, K3 e de exposição, nessa ordem (D-16) | K2 | INCONCLUSIVE, com o motivo registrado |
 | A3 | O registro das unidades em DATA2 é completo o bastante para a forma do grafo: perda previsto→registrado ≤ 0,3 na UF | K3 | a UF sai da população primária antes da contagem; se sobrarem < 3 discordantes, INCONCLUSIVE |
 | A4 | A UF da organização representa onde o regime opera: vínculos interestaduais ≤ 5% em cada UF elegível | K4 | relatar as UFs acima de 5% como limitação; a decisão não muda |
 | A5 | A persistência não é só repetição dos mesmos vínculos de DATA1 (inércia) | K5 | se a sobreposição mediana de pares (CNPJ, código) com DATA1 nas UFs discordantes for > 0,5, a interpretação se restringe a "persistência compatível com inércia de vínculos" e T2 é relatado ao lado; o primário decide |

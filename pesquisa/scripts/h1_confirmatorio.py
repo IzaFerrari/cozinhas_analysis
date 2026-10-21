@@ -1,8 +1,11 @@
 # H1 (analysis-plan.md): o regime de alocação da UF persiste ou segue a escassez?
-# Uso: h1_confirmatorio.py <alvo> <referencia> <saida.json>
+# Uso: h1_confirmatorio.py <alvo> <referencia> <saida.json> <ano> <sha_contratacoes> <sha_unidades>
 #   alvo        pasta com contratacoes.csv e unidades.csv do ano confirmatório (DATA2)
-#   referencia  pasta com o DATA1 (só para a sobreposição de vínculos, K5/T2, e para T5)
-# Congelado com o plano (D-10). Mudança depois do congelamento só por CHANGE_PLAN.
+#   referencia  pasta com o DATA1 (classes, K5/T2, T5 e exclusão de projetos já vistos)
+#   ano         ano confirmatório; só linhas com ANO igual entram. "2025-ensaio" = ensaio em amostra
+#               com DATA1 como alvo (sem exclusão de projetos já vistos); nunca é teste de H1
+#   sha_*       hashes de DATA2 registrados em decisoes.md antes de abrir; divergência para a execução
+# Congelado com o plano (D-10, D-12, D-16). Mudança depois do congelamento só por CHANGE_PLAN.
 import sys, json, hashlib
 from math import comb
 import pandas as pd
@@ -20,6 +23,9 @@ MIN_DISCORDANTES, PROP_DECISAO = 3, 0.75
 MIN_UFS = 6                # K2
 BANDA_T3 = (0.4, 0.6)
 MIN_VINC_T2 = 5
+CODIGO_UNIDADE = r"(CS|EG)\d+"          # D-16: marcadores como "unidade gestora" não são unidades
+MECANISMOS = {"CDS", "CDAF", "CI"}       # D-16: K1 confere o conjunto de rótulos
+EXPOSTAS = {"2026": ["PI"]}              # D-16: UF cuja razão do ano confirmatório foi vista antes do congelamento
 COLUNAS_C = ["N° DO PROJETO", "CNPJ", "UF ORGANIZAÇÃO", "MECANISMO RESUMO 2", "Nº. DE ATENDIMENTO ÀS UNIDADES RECEBEDORAS PREVISTO*"]
 COLUNAS_U = ["Num TPAF", "Código da Cozinha", "UF Consumidor"]
 
@@ -36,15 +42,20 @@ def carregar(pasta):
     faltam = [x for x in COLUNAS_C if x not in c.columns] + [x for x in COLUNAS_U if x not in u.columns]
     if faltam:  # K1
         raise SystemExit(f"BLOCKED (K1): colunas ausentes {faltam}")
-    u = u.assign(cod=u["Código da Cozinha"].str.strip())
+    c = c.assign(CNPJ=c["CNPJ"].str.replace(r"\D", "", regex=True))
+    u = u.assign(cod=u["Código da Cozinha"].str.strip().str.upper())
     return c, u
+
+
+def filtrar_ano(c, u, ano):
+    return c[c["ANO"].str.strip() == ano], u[u["ANO"].str.strip() == ano]
 
 
 def vinculos(c, u, so_cs=False):
     cds = c[c["MECANISMO RESUMO 2"].str.strip() == "CDS"]
     v = (cds[["N° DO PROJETO", "CNPJ", "UF ORGANIZAÇÃO"]]
          .merge(u[["Num TPAF", "cod", "UF Consumidor"]], left_on="N° DO PROJETO", right_on="Num TPAF"))
-    v = v[v["cod"].notna() & (v["cod"] != "")]
+    v = v[v["cod"].notna() & v["cod"].str.fullmatch(CODIGO_UNIDADE)]
     if so_cs:
         v = v[v["cod"].str.upper().str.startswith("CS")]
     return v.drop_duplicates(["CNPJ", "cod"])
@@ -90,12 +101,14 @@ def classe(p):
     return "pool" if p >= LIMIAR_POOL else "esparsa"
 
 
-def decidir(tab, ufs, limiar, chave_pool="pool", ref=CLASSE_DATA1):
+def decidir(tab, ufs, limiar, chave_pool="pool", ref=CLASSE_DATA1, razao1=None):
+    # D-16: só conta a UF cuja classe de escassez muda entre DATA1 e DATA2 (a razão cruza o limiar)
     disc = []
     for uf in ufs:
         t = tab[uf]
         escassez = "pool" if t["razao"] >= limiar else "esparsa"
-        if escassez != ref[uf]:
+        escassez1 = "pool" if razao1[uf] >= limiar else "esparsa"
+        if escassez != escassez1 and escassez != ref[uf]:
             obs = classe(t[chave_pool])
             disc.append(dict(uf=uf, regra=ref[uf], escassez=escassez, observado=obs,
                              acerta=("regra" if obs == ref[uf] else "escassez")))
@@ -115,10 +128,26 @@ def decidir(tab, ufs, limiar, chave_pool="pool", ref=CLASSE_DATA1):
                 p_binomial_meio=cauda, ufs=disc)
 
 
-def main(alvo, referencia, saida):
+def main(alvo, referencia, saida, ano, sha_c, sha_u):
+    esperado = {"contratacoes.csv": sha_c, "unidades.csv": sha_u}
+    for n, h in esperado.items():
+        if hashlib.sha256(open(f"{alvo}/{n}", "rb").read()).hexdigest() != h:
+            raise SystemExit(f"hash de {n} não confere com o registrado")
     c2, u2 = carregar(alvo)
     c1, u1 = carregar(referencia)
+    rotulos = set(c2["MECANISMO RESUMO 2"].dropna().str.strip())
+    if not rotulos <= MECANISMOS or "CDS" not in rotulos:  # K1
+        raise SystemExit(f"BLOCKED (K1): rótulos de mecanismo {sorted(rotulos)}")
+    ensaio = ano.endswith("-ensaio")
+    ano = ano.split("-")[0]
+    c2, u2 = filtrar_ano(c2, u2, ano)
+    ja_vistos = set(c1["N° DO PROJETO"].str.strip())
+    repetidos = int(c2["N° DO PROJETO"].str.strip().isin(ja_vistos).sum())
+    if not ensaio:
+        c2 = c2[~c2["N° DO PROJETO"].str.strip().isin(ja_vistos)]
     v2, v1 = vinculos(c2, u2), vinculos(c1, u1)
+    if v2.empty:  # K1
+        raise SystemExit("BLOCKED (K1): nenhum vínculo CDS no ano confirmatório")
     tab = por_uf(v2)
     perdas = perda(c2, u2)
     pares1 = set(zip(v1["CNPJ"], v1["cod"]))
@@ -142,23 +171,32 @@ def main(alvo, referencia, saida):
     perdas1 = perda(c1, u1)
     if sorted(uf for uf in CLASSE_DATA1 if perdas1[uf] > MAX_PERDA) != EXCLUIDAS_K7:
         raise SystemExit("K7 recalculada sobre DATA1 não bate com EXCLUIDAS_K7")
-    elegiveis = sorted(uf for uf in CLASSE_DATA1 if uf in tab and tab[uf]["elegivel"] and uf not in EXCLUIDAS_K7)
+    razao1 = {uf: tab1[uf]["razao"] for uf in CLASSE_DATA1}
+    # D-16: ordem fixa — elegibilidade nos dois anos → K7 → K3 → UFs expostas → K2
+    elegiveis = sorted(uf for uf in CLASSE_DATA1 if uf in tab and tab[uf]["elegivel"])
+    k3_fora = [uf for uf in elegiveis if uf not in EXCLUIDAS_K7 and (tab[uf]["perda"] is None or tab[uf]["perda"] > MAX_PERDA)]
+    expostas = [uf for uf in EXPOSTAS.get(ano, []) if uf in elegiveis]
+    primarias = [uf for uf in elegiveis if uf not in EXCLUIDAS_K7 and uf not in k3_fora and uf not in expostas]
     out_k7 = EXCLUIDAS_K7
-    out = dict(entrada={n: hashlib.sha256(open(f"{alvo}/{n}", "rb").read()).hexdigest() for n in ["contratacoes.csv", "unidades.csv"]},
-               por_uf=tab, elegiveis=elegiveis, K7_excluidas=out_k7)
-    if len(elegiveis) < MIN_UFS:  # K2
-        out["T1"] = dict(estado="INCONCLUSIVE", motivo=f"K2: {len(elegiveis)} UFs elegíveis nos dois anos (< {MIN_UFS})")
+    out = dict(ensaio=ensaio, entrada={n: hashlib.sha256(open(f"{alvo}/{n}", "rb").read()).hexdigest() for n in ["contratacoes.csv", "unidades.csv"]},
+               por_uf=tab, elegiveis=elegiveis, K7_excluidas=out_k7, K3_excluidas=k3_fora,
+               expostas_excluidas=expostas, primarias=primarias, projetos_ja_em_data1=repetidos,
+               razao_data1=razao1)
+    # relato à parte (D-16): UFs fora da primária por exposição e a discordância herdada de DATA1 (PR)
+    out["expostas_relato"] = {uf: dict(razao=tab[uf]["razao"], classe=classe(tab[uf]["pool"])) for uf in expostas}
+    out["herdadas_relato"] = {uf: dict(razao=tab[uf]["razao"], classe=classe(tab[uf]["pool"]))
+                              for uf in primarias if (razao1[uf] >= LIMIAR_ESCASSEZ) != (CLASSE_DATA1[uf] == "pool")}
+    if len(primarias) < MIN_UFS:  # K2
+        out["T1"] = dict(estado="INCONCLUSIVE", motivo=f"K2: {len(primarias)} UFs utilizáveis (< {MIN_UFS})")
     else:
-        k3_fora = [uf for uf in elegiveis if tab[uf]["perda"] is None or tab[uf]["perda"] > MAX_PERDA]
-        primarias = [uf for uf in elegiveis if uf not in k3_fora]
-        out["K3_excluidas"] = k3_fora
-        out["T1"] = decidir(tab, primarias, LIMIAR_ESCASSEZ)
-        out["T2"] = decidir(tab, [uf for uf in primarias if tab[uf]["pool_novos"] is not None], LIMIAR_ESCASSEZ, "pool_novos")
-        out["T3"] = decidir(tab, [uf for uf in primarias if not (BANDA_T3[0] <= tab[uf]["pool"] <= BANDA_T3[1])], LIMIAR_ESCASSEZ)
-        out["T4"] = {str(l): decidir(tab, primarias, l) for l in LIMIARES_T4}
+        out["T1"] = decidir(tab, primarias, LIMIAR_ESCASSEZ, razao1=razao1)
+        out["T2"] = decidir(tab, [uf for uf in primarias if tab[uf]["pool_novos"] is not None], LIMIAR_ESCASSEZ, "pool_novos", razao1=razao1)
+        out["T3"] = decidir(tab, [uf for uf in primarias if not (BANDA_T3[0] <= tab[uf]["pool"] <= BANDA_T3[1])], LIMIAR_ESCASSEZ, razao1=razao1)
+        out["T4"] = {str(l): decidir(tab, primarias, l, razao1=razao1) for l in LIMIARES_T4}
         tab_cs, tab1_cs = por_uf(vinculos(c2, u2, so_cs=True)), por_uf(vinculos(c1, u1, so_cs=True))
         ufs_cs = [uf for uf in primarias if uf in tab_cs and uf in tab1_cs]
-        out["T5"] = decidir(tab_cs, ufs_cs, LIMIAR_ESCASSEZ, ref={uf: classe(tab1_cs[uf]["pool"]) for uf in ufs_cs})
+        out["T5"] = decidir(tab_cs, ufs_cs, LIMIAR_ESCASSEZ, ref={uf: classe(tab1_cs[uf]["pool"]) for uf in ufs_cs},
+                            razao1={uf: tab1_cs[uf]["razao"] for uf in ufs_cs})
     out["K4_interestadual_max"] = max(tab[uf]["interestadual"] for uf in elegiveis) if elegiveis else None
     out["K5_sobreposicao_mediana_discordantes"] = (
         float(pd.Series([tab[d["uf"]]["sobreposicao_data1"] for d in out["T1"].get("ufs", [])]).median())
@@ -168,4 +206,4 @@ def main(alvo, referencia, saida):
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:4])
+    main(*sys.argv[1:7])

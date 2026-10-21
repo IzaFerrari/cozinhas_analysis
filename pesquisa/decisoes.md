@@ -125,3 +125,16 @@ A REVIEW-1 (`.research/reviews/REVIEW-1.md`) achou afirmações falsas em blocos
 4. A checagem estrutural do arquivo-fonte atual passa a ter evidência commitada (`pesquisa/dados/fonte_atual/`). O relatório agora declara que o nº de linhas também foi lido.
 Rationale: lei 1. A correção é um bloco novo, e os originais ficam no histórico.
 Revision condition: não revisável; é correção de registro.
+
+### D-16 · 2026-10-21 · REOPEN de H1 pela REVIEW-1 (F4, F6, F7, F8), antes de qualquer DATA2
+Supersedes: D-12
+CHANGE_PLAN com destino `REOPEN`. DATA2 continua não identificado, e nenhum conteúdo dele foi visto. Mudanças:
+1. **Discordância exige mudança (F7).** Uma UF só conta como discordante se a sua classe de escassez **muda entre DATA1 e DATA2**, isto é, se a razão cruza 1,725, e a nova classe difere da classe de regime de DATA1. Isso implementa a exigência da D-7. Antes, uma UF que já era discordante em DATA1 (o PR) contaria como acerto da persistência mesmo sem mudar nada. O PR passa a ser relatado à parte.
+2. **Exposição do PI (F4).** Se DATA2 for 2026, o PI sai da população primária e é relatado à parte. A razão dele em 2026 (cerca de 1,75, por notícia) foi vista antes de o limiar 1,725 ser fixado, e o limiar ficou logo abaixo dela. A regra é "UF cuja razão do ano confirmatório foi vista antes do congelamento sai". Hoje ela só atinge o PI em 2026.
+3. **Ordem das exclusões (F6).** A ordem fica: elegibilidade nos dois anos, K7, K3, exposição e, por fim, K2 (≥ 6 UFs utilizáveis). Foi declarado na D-15 que o REOPEN da D-12 tirou PE e RS, as UFs mais próximas do limiar.
+4. **Código (F8).** O script passa a exigir: o ano confirmatório (só linhas com `ANO` igual) e a exclusão dos projetos que já estão em DATA1; vínculos só com códigos `CS<n>` ou `EG<n>`, porque o marcador "unidade gestora" não é unidade e criaria pool espúrio; K1 conferindo os rótulos de mecanismo ⊆ {CDS, CDAF, CI} e a existência de vínculos CDS (senão BLOCKED); o CNPJ normalizado para dígitos; e o sha256 de DATA2 conferido contra valores que precisam ser registrados neste log **antes** de abrir o arquivo. Há um modo explícito `2025-ensaio` para ensaio em amostra, que nunca é teste de H1.
+5. **Tabela de DATA1.** Com a regra de código, só o PR muda: participação 0,46 e razão 2,40 (antes 0,43 e 2,17). A classe continua esparsa. O intervalo de limiares que minimiza erros continua (1,45; 2,00], e o limiar continua 1,725.
+Consequência declarada: a população utilizável máxima é de oito UFs, ou sete em 2026. Com a exigência de cruzamento, o resultado mais provável é INCONCLUSIVE.
+Transparência: as mudanças vêm de uma revisão adversarial do commit 3eefb73 e de diagnósticos sobre DATA1 (descoberta). Nenhuma delas usa conteúdo de DATA2.
+Rationale: leis 2 e 5. O desenho é corrigido antes da exposição ao dado confirmatório.
+Revision condition: mudança só por bloco novo com `Supersedes: D-16`, antes de abrir DATA2.
