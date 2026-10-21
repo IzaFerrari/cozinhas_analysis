@@ -27,7 +27,7 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 | 2 Literature | reached | | `pesquisa/literatura/busca.md` · `pesquisa/literatura/fontes.md#lacuna` · `pesquisa/decisoes.md#d-8` |
 | 3 Protocol | reached | | `pesquisa/protocolo.md#compromissos-congelados` · `analysis-plan.md` · `pesquisa/registro.md` · `pesquisa/decisoes.md#d-10` · `pesquisa/decisoes.md#d-12` · `pesquisa/decisoes.md#d-16` · `pesquisa/decisoes.md#d-17` |
 | 4 Data | reached | | `pesquisa/dados/relatorio.md` · `pesquisa/agregados/dados.csv` · `pesquisa/decisoes.md#d-11` |
-| 5 Analysis | reached | | `.research/runs/RUN-2.json` · `.research/runs/RUN-3.json` · `.research/runs/RUN-4.json` · `.research/runs/RUN-5.json` · `pesquisa/agregados/h2_data1.json` · `pesquisa/decisoes.md#d-14` · `pesquisa/decisoes.md#d-15` |
+| 5 Analysis | reached | | `.research/runs/RUN-2.json` · `.research/runs/RUN-3.json` · `.research/runs/RUN-4.json` · `.research/runs/RUN-5.json` · `.research/runs/RUN-6.json` · `pesquisa/agregados/h2_data1.json` · `pesquisa/decisoes.md#d-14` · `pesquisa/decisoes.md#d-15` |
 | 6 Writing | reached | | `pesquisa/texto/artigo.md` |
 | 7 Review | pending | | |
 | 8 Publication | pending | | |
@@ -51,4 +51,5 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 - 2026-10-21: REVIEW-1 = FAIL; correções na D-15 e REOPEN de H1 antes de DATA2 (D-16: discordância exige cruzar o limiar, PI excluído em 2026, regra de código, ano e hash)
 - 2026-10-21: RUN-5 (ensaio do código da D-16, replay EXACT); manuscrito revisado; respostas à REVIEW-1 registradas
 - 2026-10-21: REVIEW-2 = FAIL (N1, N2 materiais); REOPEN de H1 com faixa de escassez e correções do código (D-17)
-- Next: teste sintético e ensaio do código da D-17, revisão do manuscrito e REVIEW-3
+- 2026-10-21: teste sintético (16 casos), RUN-6 (replay EXACT), manuscrito revisado e respostas à REVIEW-2
+- Next: fase 7 — REVIEW-3 (reviewer-2) do commit atual
