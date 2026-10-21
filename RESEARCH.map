@@ -1,0 +1,42 @@
+# RESEARCH.map — cozinhas-regime-de-alocacao
+
+## Layout
+- protocol: pesquisa/protocolo.md
+- decisions: pesquisa/decisoes.md
+- aggregates: pesquisa/agregados/
+- documents: pesquisa/texto/
+- notebooks: analise.ipynb
+- references: pesquisa/referencias.bib
+
+## Question
+Por que algumas organizações fornecedoras de projetos CDS do PAA–Cozinhas atendem muito mais unidades: regra de montagem da UF (pool) ou escassez local? → `pesquisa/protocolo.md#question`
+Problem: SHOWN → `pesquisa/problem-brief.md`
+Registration: none
+
+## Hypotheses
+| Id | Prediction | Refutation | State | Pointer |
+|---|---|---|---|---|
+
+## Gates
+| Phase | State | Blocked by | Evidence |
+|---|---|---|---|
+| 1A Problem — formulate | reached | | `pesquisa/decisoes.md#d-4` · `pesquisa/exploracao/2026-10-21-explorer.md` · `pesquisa/protocolo.md#question` · `pesquisa/decisoes.md#d-5` |
+| 1B Problem — establish | reached | | `pesquisa/problem-brief.md` · `pesquisa/decisoes.md#d-7` |
+| 2 Literature | pending | | |
+| 3 Protocol | pending | | |
+| 4 Data | pending | | |
+| 5 Analysis | pending | | |
+| 6 Writing | pending | | |
+| 7 Review | pending | | |
+| 8 Publication | pending | | |
+
+## Deferred
+- 2026-10-21: Economia de rota (aglomeração da demanda) — enters when: houver cadastro externo das cozinhas por município e um desfecho independente de DATA1 (D-5)
+- 2026-10-21: Perecibilidade da cesta — enters when: houver classificação de produtos verificada e um desfecho independente de DATA1 (D-5)
+- 2026-10-21: Complementaridade de cesta (fornecedores da mesma unidade com produtos diferentes) — enters when: um desfecho independente de DATA1 permitir testá-la sem reaproveitar a exploração de 2026-10-14 (D-2, D-5)
+
+## Last session
+- 2026-10-21: pesquisa recomeçada com escopo explicativo (D-1 a D-3); só o snapshot DATA1 de 2026-10-14 foi reaproveitado, já exposto (D-2)
+- 2026-10-21: 1A alcançado — orçamento antes da exploração (D-4), três linhagens ativas, enunciado associacional (D-5)
+- 2026-10-21: 1B alcançado — P1 e P2 SHOWN (D-6), com regime e escassez quase colineares em DATA1 (D-7)
+- Next: fase 2 — ler as chamadas públicas CONAB/MDS do PAA–Cozinhas sobre quem lista as unidades da proposta e verificar, sem abrir o conteúdo, se existe a planilha de outro ano como dado independente

@@ -18,7 +18,7 @@ Non-goals: não estima efeito causal do regime sobre volume entregue, pessoas at
 
 Linhagens adotadas da exploração (`pesquisa/exploracao/2026-10-21-explorer.md`); as hipóteses só se fixam na fase 3:
 
-1. **Regime de alocação por UF (pool × partição).** É a hipótese explicativa central, contra a escassez local.
+1. **Regime de alocação por UF (pool denso × rede esparsa sobreposta).** É a hipótese explicativa central, contra a escassez local. Era "pool × partição" na exploração; foi renomeada depois do gate 1B (D-7), que achou territórios exclusivos raros.
 2. **Funil proposta → registro.** Condição de medida: define se o desfecho é o grau previsto ou o registrado, e como tratar a perda que cresce com o tamanho do projeto.
 3. **Diluição × capacidade.** Assinatura quantitativa: a elasticidade do grau em relação à oferta separa atribuição de oferta empurrada.
 

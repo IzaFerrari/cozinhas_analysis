@@ -56,3 +56,10 @@ Transparência: a cobertura por UF, a densidade da UF inteira e a razão unidade
 Limite conhecido: componentes conexos não detectam pools sobrepostos dentro de um componente grande e esparso. Se uma UF grande sair "partição", isso não exclui pools locais sobrepostos. Esse limite fica registrado no problem brief.
 Rationale: a refutação (c) é a forma mais barata de fazer a premissa do regime desaparecer usando só DATA1.
 Revision condition: um limiar só muda por bloco novo e antes de qualquer uso confirmatório. Mudar depois de ver o resultado de P2 torna o veredito exploratório.
+
+### D-7 · 2026-10-21 · Consequências do gate 1B para o portfólio
+O problem brief (`pesquisa/problem-brief.md`) dá `SHOWN` para P1 e P2 pela referência da D-6, com duas ressalvas que mudam o portfólio.
+1. A linhagem 1 passa a ser "pool denso × rede esparsa sobreposta". Fora do PR, os territórios exclusivos são raros nas UFs elegíveis.
+2. Em DATA1, regime e razão unidades/organizações quase coincidem: dez das onze UFs elegíveis; a exceção é o PR. Fica fixado como requisito do teste confirmatório que o dado independente traga variação que separe as duas explicações. Antes de abrir o dado novo, a fase 3 fixa como essa separação será verificada, por exemplo UFs cuja razão muda entre anos. Se o dado independente repetir a colinearidade, a hipótese do regime termina em `INCONCLUSIVE`, e não em `CONFIRMED`.
+Rationale: a refutação (c) do enunciado foi testada e não eliminou a premissa, mas mostrou que DATA1 não separa as duas explicações.
+Revision condition: um documento da fase 2 que descreva a regra de montagem das propostas por UF. Se ele existir, o regime pode ser observado diretamente, sem depender só da forma do grafo.
