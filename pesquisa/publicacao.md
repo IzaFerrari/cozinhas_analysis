@@ -1,6 +1,6 @@
 # Publicação — PUBLISH preflight (fase 8)
 
-Data: 2026-10-21. Alvo: o manuscrito de trabalho `pesquisa/texto/artigo.md` (commit f0a8c93), com os resultados exploratórios de 2025 e o teste de H1 registrado em `BLOCKED`. **Nada foi publicado nem enviado para fora do repositório.**
+Data: 2026-10-21. Alvo: o manuscrito **descritivo** `pesquisa/texto/artigo.md` (escopo da D-22, corrigido pela D-23). Atualização: a revisão de referência passa a ser a REVIEW-6, sobre o manuscrito descritivo; as linhas abaixo que citam a REVIEW-3, a REVIEW-4 e as afirmações C1–C8 descrevem o estado anterior (f0a8c93). **Nada foi publicado nem enviado para fora do repositório.**
 
 ## Requisitos verificáveis aqui
 
