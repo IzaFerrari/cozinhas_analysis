@@ -138,3 +138,17 @@ Consequência declarada: a população utilizável máxima é de oito UFs, ou se
 Transparência: as mudanças vêm de uma revisão adversarial do commit 3eefb73 e de diagnósticos sobre DATA1 (descoberta). Nenhuma delas usa conteúdo de DATA2.
 Rationale: leis 2 e 5. O desenho é corrigido antes da exposição ao dado confirmatório.
 Revision condition: mudança só por bloco novo com `Supersedes: D-16`, antes de abrir DATA2.
+
+### D-17 · 2026-10-21 · REOPEN de H1 pela REVIEW-2 (N1, N5, N6, N7, N11), antes de qualquer DATA2
+Supersedes: D-16
+CHANGE_PLAN com destino `REOPEN`. DATA2 continua não identificado e não visto. Mudanças:
+1. **Faixa de escassez em vez de ponto (N1).** Em DATA1, qualquer limiar em (1,45; 2,00] separa as classes com um único erro, e o ponto 1,725 é arbitrário dentro dessa faixa. O preditor de escassez passa a ter três estados: pool com razão ≥ 2,00, esparsa com razão ≤ 1,45, indeterminado entre os dois. Discordante é a UF que em DATA1 estava do lado da sua classe e em DATA2 passou para o lado oposto. Um CONFIRMED refuta a escassez para qualquer limiar compatível com DATA1, e não só para 1,725. Este é o caminho (a) proposto pelo revisor. T4 passa a usar os pontos 1,60, 1,725 e 1,85 como sensibilidade. O May claim foi estreitado para "nas UFs cuja razão saiu da faixa para o lado oposto". Nota: a razão de notícia do PI em 2026 (cerca de 1,75) cai dentro da faixa, então o PI já não seria discordante por ela. Mesmo assim, a exclusão do PI em 2026 (D-16) é mantida, por conservadorismo.
+2. **K2 sem herdadas (N11).** As UFs herdadas, que já estavam do lado oposto em DATA1 (o PR), não contam para K2. A população utilizável máxima passa a sete UFs, ou seis em 2026.
+3. **Hash de arquivo commitado (N6).** O script lê o hash esperado de `pesquisa/dados/DATA2.sha256`. Esse arquivo precisa ser commitado antes de abrir DATA2 e, portanto, antes do execution freeze. Sem ele, o resultado é BLOCKED. O hash deixa de ser argumento.
+4. **K1 completa (N5).** `ANO` entra nas colunas obrigatórias. A fração de códigos descartados pela regra `CS<n>`/`EG<n>` é relatada por UF.
+5. **Perda sem marcador (N7).** A perda (K3, K7) não conta o marcador "unidade gestora" como registrado. Em DATA1, K7 continua excluindo MG, PE e RS. A perda do PR passa de 0,125 a 0,188.
+6. **Saída (N3).** O PR herdado é relatado também na variante só-CS.
+Correção de registro (N8): a D-8 chamou o Ato Dipai nº 05/2024 de "vigente em 2025" sem fonte. Não verificamos qual versão regia 2025. `fontes.md` e `busca.md` foram corrigidos.
+Transparência: é o terceiro REOPEN de H1 (D-12, D-16, D-17), todos antes de qualquer DATA2. Os dois últimos foram motivados por revisões adversariais separadas, e o primeiro, por diagnóstico de DATA1.
+Rationale: leis 2 e 5.
+Revision condition: mudança só por bloco novo com `Supersedes: D-17`, antes de abrir DATA2.

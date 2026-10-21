@@ -16,7 +16,7 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 ## Hypotheses
 | Id | Prediction | Refutation | State | Pointer |
 |---|---|---|---|---|
-| H1 | Nas UFs discordantes, o regime do ano confirmatório segue o regime de 2025 (persistência), não a escassez | ≥ 75% das UFs discordantes (que cruzam o limiar entre os anos) seguem a escassez (T1) | BLOCKED | `analysis-plan.md#h1` |
+| H1 | Nas UFs discordantes, o regime do ano confirmatório segue o regime de 2025 (persistência), não a escassez | ≥ 75% das UFs discordantes (que saem da faixa 1,45–2,00 para o lado oposto) seguem a escassez (T1) | BLOCKED | `analysis-plan.md#h1` |
 | H2 | Exploratória: elasticidade grau–kg dentro da UF em DATA1 | não se aplica (exploratória) | NOT_VERIFIED | `analysis-plan.md#h2` |
 
 ## Gates
@@ -25,7 +25,7 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 | 1A Problem — formulate | reached | | `pesquisa/decisoes.md#d-4` · `pesquisa/exploracao/2026-10-21-explorer.md` · `pesquisa/protocolo.md#question` · `pesquisa/decisoes.md#d-5` |
 | 1B Problem — establish | reached | | `pesquisa/problem-brief.md` · `pesquisa/decisoes.md#d-7` |
 | 2 Literature | reached | | `pesquisa/literatura/busca.md` · `pesquisa/literatura/fontes.md#lacuna` · `pesquisa/decisoes.md#d-8` |
-| 3 Protocol | reached | | `pesquisa/protocolo.md#compromissos-congelados` · `analysis-plan.md` · `pesquisa/registro.md` · `pesquisa/decisoes.md#d-10` · `pesquisa/decisoes.md#d-12` · `pesquisa/decisoes.md#d-16` |
+| 3 Protocol | reached | | `pesquisa/protocolo.md#compromissos-congelados` · `analysis-plan.md` · `pesquisa/registro.md` · `pesquisa/decisoes.md#d-10` · `pesquisa/decisoes.md#d-12` · `pesquisa/decisoes.md#d-16` · `pesquisa/decisoes.md#d-17` |
 | 4 Data | reached | | `pesquisa/dados/relatorio.md` · `pesquisa/agregados/dados.csv` · `pesquisa/decisoes.md#d-11` |
 | 5 Analysis | reached | | `.research/runs/RUN-2.json` · `.research/runs/RUN-3.json` · `.research/runs/RUN-4.json` · `.research/runs/RUN-5.json` · `pesquisa/agregados/h2_data1.json` · `pesquisa/decisoes.md#d-14` · `pesquisa/decisoes.md#d-15` |
 | 6 Writing | reached | | `pesquisa/texto/artigo.md` |
@@ -50,4 +50,5 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 - 2026-10-21: fase 6 alcançada — manuscrito com 7 afirmações exploratórias rastreadas a R3/R4 e o teste registrado em BLOCKED
 - 2026-10-21: REVIEW-1 = FAIL; correções na D-15 e REOPEN de H1 antes de DATA2 (D-16: discordância exige cruzar o limiar, PI excluído em 2026, regra de código, ano e hash)
 - 2026-10-21: RUN-5 (ensaio do código da D-16, replay EXACT); manuscrito revisado; respostas à REVIEW-1 registradas
-- Next: fase 7 — REVIEW-2 (reviewer-2) do commit atual
+- 2026-10-21: REVIEW-2 = FAIL (N1, N2 materiais); REOPEN de H1 com faixa de escassez e correções do código (D-17)
+- Next: teste sintético e ensaio do código da D-17, revisão do manuscrito e REVIEW-3

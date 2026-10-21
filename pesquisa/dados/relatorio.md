@@ -46,6 +46,6 @@ O que foi verificado em 2026-10-21, sem abrir desfechos:
 - A versão atual do arquivo-fonte de DATA1 (exportação xlsx de 2026-10-21, agora em `pesquisa/dados/fonte_atual/fonte_2026-10-21.xlsx`, sha256 `52a35d26…6bf`) só tem as abas `DADOS`, `PRODUTOS`, `CONTRATAÇÕES 2025` e `UNIDADES RECEBEDORAS`. Foram lidos os nomes das abas, os valores distintos da coluna `ANO` e o nº de linhas com `ANO` preenchido: só 2025, com 280 e 1116 linhas, como em DATA1 (`pesquisa/dados/fonte_atual/checagem.json`, de `pesquisa/scripts/checa_fonte.py`). Não há outro ano. A igualdade do nº de linhas não prova que o conteúdo é idêntico, porque as células não foram comparadas.
 - Buscas na web (`pesquisa/literatura/busca.md`, W1 e W5) não encontraram planilha pública de 2024 ou 2026. A ausência vale para esta busca.
 
-Exposições ligadas a um possível DATA2: números de notícias de 2026 (PI, RS) e de 2025 (PR), registrados em `busca.md`. Nenhum é o desfecho de H1.
+Exposições ligadas a um possível DATA2: números de notícias de 2026 (PI), de ano não verificado (RS) e de 2025 (PR), registrados em `busca.md`. Nenhum é o desfecho de H1.
 
 Consequência: H1 não pode ser executada. O estado é `BLOCKED` até que DATA2 seja identificado (D-11). A entrada exige: (1) obter a planilha de outro ano junto à CONAB/GEIAF, pelo Fala.BR ou com a orientação acadêmica; (2) registrar procedência e hash **antes** de qualquer leitura; (3) rodar `pesquisa/scripts/h1_confirmatorio.py` sem mudanças, seguindo o contrato de execução.

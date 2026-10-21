@@ -1,6 +1,6 @@
 # Protocolo — Por que algumas organizações fornecedoras do PAA–Cozinhas atendem muito mais unidades
 
-Estado: congelado (fase 3, D-10; reaberto e recongelado na D-12 e na D-16). Mudança material só por bloco novo em `decisoes.md` (CHANGE_PLAN). O congelamento é o commit que traz este estado junto com `analysis-plan.md` em `Freeze: frozen`. Registro: interno, `pesquisa/registro.md` (D-10).
+Estado: congelado (fase 3, D-10; reaberto e recongelado na D-12, na D-16 e na D-17). Mudança material só por bloco novo em `decisoes.md` (CHANGE_PLAN). O congelamento é o commit que traz este estado junto com `analysis-plan.md` em `Freeze: frozen`. Registro: interno, `pesquisa/registro.md` (D-10).
 
 ## Question
 
@@ -33,7 +33,7 @@ Rota, perecibilidade e complementaridade de cesta estão em `Deferred` no mapa (
 
 ### Estimandos
 
-- **E1.** Na população de UFs utilizáveis (elegíveis nos dois anos, sem as excluídas por K7, K3 e exposição; D-12, D-16), e restrita às UFs discordantes, isto é, as que cruzam o limiar de escassez entre os anos: a proporção cuja classe de regime em DATA2 coincide com a classe de DATA1, contra a proporção que coincide com a classe prevista pela razão unidades/organizações de DATA2 (limiar 1,725).
+- **E1.** Na população de UFs utilizáveis (elegíveis nos dois anos, sem as excluídas por K7, K3 e exposição; D-12, D-16), e restrita às UFs discordantes, isto é, as que saem da faixa de escassez (1,45; 2,00) para o lado oposto ao da sua classe (D-17): a proporção cuja classe de regime em DATA2 coincide com a classe de DATA1, contra a proporção que coincide com a classe prevista pela razão unidades/organizações de DATA2 (faixa de 1,45 a 2,00; D-17).
 - **E2.** Em DATA1, nas organizações CDS com vínculo: a inclinação de log(grau registrado) em log(kg previsto) dentro da UF.
 
 ### Dados e população

@@ -14,7 +14,7 @@ Sustenta:
 - item 37: são contratados os projetos que "se declarem aptos com a demanda da cozinha, em termos de ofertas de alimentos e atendimento logístico";
 - item 34: limites de R$ 15 mil por unidade familiar por ano e de R$ 1,5 milhão por organização fornecedora por ano. <!-- rm:ignore: limites normativos, não resultados -->
 
-**Limite:** é a versão de 2026. A versão vigente durante as contratações de 2025 (Ato Dipai nº 05, de 22/07/2024) foi localizada, mas não lida (W4). As regras acima ficam `NOT_VERIFIED` para 2025, até que a versão de 2024 seja lida.
+**Limite:** é a versão de 2026. Uma versão anterior (Ato Dipai nº 05, de 22/07/2024) foi localizada, mas não lida (W4). Não verificamos qual versão regia as contratações de 2025 (correção da D-17). As regras acima ficam `NOT_VERIFIED` para 2025, até que a versão de 2024 seja lida.
 
 ### N2 · GGPAA, ata da reunião de 29/01/2025
 Cópia em `documentos/ggpaa_ata_2025-01-29.pdf` (sha256 `942b7fe0…3be6`), de gov.br/mds. Nível: **texto** do item sobre o cronograma da CDS em 2025.

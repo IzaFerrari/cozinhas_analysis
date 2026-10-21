@@ -21,7 +21,7 @@ Não consultados diretamente: SciELO, BDTD/teses, Google Acadêmico e relatório
 | W1 | Busca web: planilha CONAB PAA–Cozinhas de projetos e unidades | Nenhuma planilha de outro ano encontrada; notícias regionais |
 | W2 | Busca web: regras da proposta CDS para cozinhas | Manual de Operações da CONAB, Título 30 |
 | W3 | Busca web: resoluções GGPAA sobre cozinhas | Resolução PAA/GG nº 7/2023; atas do GGPAA |
-| W4 | Busca web: versões do Título 30 | Versão de 2026 (lida); versão de 2024 (Ato Dipai nº 05/2024, vigente em 2025) localizada, mas não obtida: o site antigo da CONAB tem certificado TLS inválido e devolveu HTML em vez de PDF; o Internet Archive respondeu 429 |
+| W4 | Busca web: versões do Título 30 | Versão de 2026 (lida); versão anterior (Ato Dipai nº 05/2024; não verificamos se era a vigente em 2025) localizada, mas não obtida: o site antigo da CONAB tem certificado TLS inválido e devolveu HTML em vez de PDF; o Internet Archive respondeu 429 |
 | W5 | Busca web ampla: planilhas de 2026 no gov.br/conab | Nenhuma planilha; notícias de 2026 (ver exposição abaixo) |
 
 ## Exposição registrada nesta busca
