@@ -1,0 +1,16 @@
+{
+  "id": "RUN-4",
+  "mode": "exploratory",
+  "hypothesis": "H1",
+  "estimand": "E1",
+  "test": "T1",
+  "execution_freeze": "7c85910",
+  "commit": "1b8c451",
+  "note": "Ensaio em amostra do código de H1 congelado após o REOPEN (D-12, 0ef5f3a), com DATA1 como alvo e referência. Verifica K7 e o código; não é teste de H1 (D-2).",
+  "inputs": [{"id": "DATA1", "path": "pesquisa/dados/brutos", "role": "discovery"}],
+  "outputs": [{"result": "R4", "artifact": "pesquisa/agregados/h1_data1_em_amostra_v2.json"}],
+  "replay": {
+    "command": [".venv/bin/python", "-I", "pesquisa/scripts/h1_confirmatorio.py", "pesquisa/dados/brutos", "pesquisa/dados/brutos", "pesquisa/agregados/h1_data1_em_amostra_v2.json"],
+    "environment": ["pesquisa/requirements.txt"]
+  }
+}
