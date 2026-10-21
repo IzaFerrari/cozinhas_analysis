@@ -25,8 +25,8 @@ Números de `pesquisa/agregados/dados.csv`, gerado por `pesquisa/scripts/dados.p
 ### Medida
 
 - **Grau.** Nº de códigos distintos vinculados aos projetos CDS do CNPJ. Mede unidades recebedoras **registradas**, não cozinhas físicas.
-- **Granularidade.** Dos 705 vínculos CDS, 682 usam códigos CS, 22 usam códigos EG e 1 tem outro valor ("unidade gestora"). A fração não-CS é 0,033 (K6 de H1 em DATA1: abaixo do limite).
-- **Interestaduais.** São 10 vínculos (0,014). Três códigos estão ligados a organizações de mais de uma UF (K4 em DATA1: abaixo do limite).
+- **Granularidade.** Dos 705 vínculos CDS, 682 usam códigos CS, 22 usam códigos EG e 1 tem outro valor ("unidade gestora"). A fração não-CS nacional é 0,033. A checagem K6 de H1, porém, é **por UF**: em DATA1, o PR tem 0,286 de vínculos não-CS (4 de 14), acima do limite de 0,2 (`pesquisa/agregados/h1_data1_em_amostra_v2.json`). Corrigido na D-15; a versão anterior deste relatório usava a fração nacional. Desde a D-16, o marcador "unidade gestora" não conta como unidade.
+- **Interestaduais.** São 10 vínculos (0,014). Três códigos estão ligados a organizações de mais de uma UF. A checagem K4 é **por UF**: em DATA1, SE (0,091) e MG (0,077) passam de 0,05 (D-15; a versão anterior usava a fração nacional).
 - **Previsto × registrado.** O previsto está preenchido em todos os projetos CDS. O registrado é igual ao previsto em 173 projetos, menor em 46 e nunca maior. A perda por faixa de tamanho está em `pesquisa/agregados/h2_data1.json` (fase 5).
 
 ### População analítica
@@ -43,7 +43,7 @@ Os documentos em `pesquisa/texto/` usam só agregados por UF ou nacionais, sem n
 Exigência (D-3, D-7, `analysis-plan.md#h1`): a mesma planilha de outro ano, com o mesmo esquema, sem exposição prévia ao conteúdo.
 
 O que foi verificado em 2026-10-21, sem abrir desfechos:
-- A versão atual do arquivo-fonte de DATA1 (exportação xlsx, sha256 `52a35d26…6bf`) só tem as abas `DADOS`, `PRODUTOS`, `CONTRATAÇÕES 2025` e `UNIDADES RECEBEDORAS`. Só foram lidos os nomes das abas e os valores distintos da coluna `ANO`: só 2025, com as mesmas 280 e 1116 linhas de DATA1. Não há outro ano nem projetos novos.
+- A versão atual do arquivo-fonte de DATA1 (exportação xlsx de 2026-10-21, agora em `pesquisa/dados/fonte_atual/fonte_2026-10-21.xlsx`, sha256 `52a35d26…6bf`) só tem as abas `DADOS`, `PRODUTOS`, `CONTRATAÇÕES 2025` e `UNIDADES RECEBEDORAS`. Foram lidos os nomes das abas, os valores distintos da coluna `ANO` e o nº de linhas com `ANO` preenchido: só 2025, com 280 e 1116 linhas, como em DATA1 (`pesquisa/dados/fonte_atual/checagem.json`, de `pesquisa/scripts/checa_fonte.py`). Não há outro ano. A igualdade do nº de linhas não prova que o conteúdo é idêntico, porque as células não foram comparadas.
 - Buscas na web (`pesquisa/literatura/busca.md`, W1 e W5) não encontraram planilha pública de 2024 ou 2026. A ausência vale para esta busca.
 
 Exposições ligadas a um possível DATA2: números de notícias de 2026 (PI, RS) e de 2025 (PR), registrados em `busca.md`. Nenhum é o desfecho de H1.

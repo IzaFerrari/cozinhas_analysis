@@ -1,0 +1,21 @@
+{
+ "sha256": "52a35d262e55f374515ed977fb032c19331a2a51915ab1f61041502c05b3d6bf",
+ "abas": [
+  "DADOS",
+  "PRODUTOS",
+  "CONTRATAÇÕES 2025",
+  "UNIDADES RECEBEDORAS"
+ ],
+ "CONTRATAÇÕES 2025": {
+  "anos": [
+   "2025"
+  ],
+  "linhas": 280
+ },
+ "UNIDADES RECEBEDORAS": {
+  "anos": [
+   "2025"
+  ],
+  "linhas": 1116
+ }
+}

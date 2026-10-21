@@ -115,3 +115,13 @@ Replay: o `replay.py` da ferramenta dá `ERROR` nas três, porque o recibo chama
 Diagnósticos de DATA1 vistos nos ensaios: K7 exclui MG, PE e RS; K4 passa de 5% em SE (0,091) e MG (0,077), o que no plano é limitação a relatar; K6 fica abaixo de 20% em todas as UFs elegíveis.
 Rationale: estados terminais sob a regra registrada; capacidade ausente vira `BLOCKED`, não estimativa.
 Revision condition: DATA2 identificado reabre H1 (fase 4 → FIT → fase 5).
+
+### D-15 · 2026-10-21 · Correção de afirmações falsas (REVIEW-1, F5, F6, F12, F13)
+Supersedes: D-14
+A REVIEW-1 (`.research/reviews/REVIEW-1.md`) achou afirmações falsas em blocos anteriores. Elas são corrigidas aqui, sem editar os blocos originais:
+1. D-14: "K6 fica abaixo de 20% em todas as UFs elegíveis" é **falso**. Em DATA1, o PR tem 0,286 de vínculos não-CS (4 de 14: EG000109, EG001973 duas vezes e "unidade gestora"). Pela A6, isso exige ler T5 ao lado; em RUN-4, T5 mantém o PR discordante. O PR é a única UF discordante em amostra, e essa limitação entra no manuscrito. O resto da D-14 (estados terminais, execuções, replay) continua valendo.
+2. D-12: "Nada mais muda" é **falso** quanto ao código. A exclusão K7 passou a valer antes de K2, que passou a exigir 6 de até 8 UFs em vez de 6 de até 11, e K3 ficou depois de K2, numa ordem inconsistente. O REOPEN também tirou da população PE (razão 2,00) e RS (1,45), as UFs mais próximas do limiar, o que reduz a chance de haver UFs discordantes. Nada disso foi declarado na D-12. A ordem é fixada na D-16.
+3. Relatório de dados: K4 e K6 tinham sido avaliadas com frações nacionais, mas são checagens por UF. Corrigido em `pesquisa/dados/relatorio.md`.
+4. A checagem estrutural do arquivo-fonte atual passa a ter evidência commitada (`pesquisa/dados/fonte_atual/`). O relatório agora declara que o nº de linhas também foi lido.
+Rationale: lei 1. A correção é um bloco novo, e os originais ficam no histórico.
+Revision condition: não revisável; é correção de registro.
