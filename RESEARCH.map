@@ -11,11 +11,13 @@
 ## Question
 Por que algumas organizações fornecedoras de projetos CDS do PAA–Cozinhas atendem muito mais unidades: regra de montagem da UF (pool) ou escassez local? → `pesquisa/protocolo.md#question`
 Problem: SHOWN → `pesquisa/problem-brief.md`
-Registration: none
+Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 2026-10-21 (sem registro externo; D-10)
 
 ## Hypotheses
 | Id | Prediction | Refutation | State | Pointer |
 |---|---|---|---|---|
+| H1 | Nas UFs discordantes, o regime do ano confirmatório segue o regime de 2025 (persistência), não a escassez | ≥ 75% das UFs discordantes seguem a escassez (T1) | — | `analysis-plan.md#h1` |
+| H2 | Exploratória: elasticidade grau–kg dentro da UF em DATA1 | não se aplica (exploratória) | — | `analysis-plan.md#h2` |
 
 ## Gates
 | Phase | State | Blocked by | Evidence |
@@ -23,7 +25,7 @@ Registration: none
 | 1A Problem — formulate | reached | | `pesquisa/decisoes.md#d-4` · `pesquisa/exploracao/2026-10-21-explorer.md` · `pesquisa/protocolo.md#question` · `pesquisa/decisoes.md#d-5` |
 | 1B Problem — establish | reached | | `pesquisa/problem-brief.md` · `pesquisa/decisoes.md#d-7` |
 | 2 Literature | reached | | `pesquisa/literatura/busca.md` · `pesquisa/literatura/fontes.md#lacuna` · `pesquisa/decisoes.md#d-8` |
-| 3 Protocol | pending | | |
+| 3 Protocol | reached | | `pesquisa/protocolo.md#compromissos-congelados` · `analysis-plan.md` · `pesquisa/registro.md` · `pesquisa/decisoes.md#d-10` |
 | 4 Data | pending | | |
 | 5 Analysis | pending | | |
 | 6 Writing | pending | | |
@@ -33,6 +35,7 @@ Registration: none
 ## Deferred
 - 2026-10-21: Economia de rota (aglomeração da demanda) — enters when: houver cadastro externo das cozinhas por município e um desfecho independente de DATA1 (D-5)
 - 2026-10-21: Perecibilidade da cesta — enters when: houver classificação de produtos verificada e um desfecho independente de DATA1 (D-5)
+- 2026-10-21: Diluição × capacidade com medida de capacidade exógena à demanda (por exemplo, nº de associados no CAF) — enters when: houver essa medida para as organizações e um desfecho independente de DATA1 (D-9)
 - 2026-10-21: Complementaridade de cesta (fornecedores da mesma unidade com produtos diferentes) — enters when: um desfecho independente de DATA1 permitir testá-la sem reaproveitar a exploração de 2026-10-14 (D-2, D-5)
 
 ## Last session
@@ -40,4 +43,5 @@ Registration: none
 - 2026-10-21: 1A alcançado — orçamento antes da exploração (D-4), três linhagens ativas, enunciado associacional (D-5)
 - 2026-10-21: 1B alcançado — P1 e P2 SHOWN (D-6), com regime e escassez quase colineares em DATA1 (D-7)
 - 2026-10-21: fase 2 alcançada — regra de seleção lida no MOC Título 30 (versão 2026); lacuna sobre a estrutura organização–unidade; planilha de outro ano não encontrada (D-8)
-- Next: fase 3 — fixar H1/H2, plano de análise e registro interno, e congelar antes de qualquer dado independente
+- 2026-10-21: fase 3 alcançada — H1 confirmatória e H2 exploratória (D-9); protocolo, plano e registro interno congelados (D-10)
+- Next: fase 4 — relatório de dados de DATA1 e identificação de DATA2

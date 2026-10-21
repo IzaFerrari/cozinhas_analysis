@@ -70,3 +70,20 @@ Isso muda a refutação (b) do enunciado: não há "regra nacional em que a orga
 Limite: a versão de 2024 do manual, vigente em 2025, não foi lida (N1, W4). Nenhuma fonte lida diz qual rota cada UF usou. A ligação entre rota e regime é inferência, não evidência.
 Rationale: lei 1 e CITE. A fonte foi lida e o limite de versão está declarado.
 Revision condition: a leitura da versão de 2024 com regra diferente, ou um documento por UF sobre a rota usada.
+
+### D-9 · 2026-10-21 · Revisão do plano de análise (statistical-analysis)
+A revisão do plano (statistical-analysis, `review-plan`) aceitou H1 com mudanças e reprovou H2 como confirmatória:
+1. Limiar de escassez fixado por regra: o ponto médio do intervalo de limiares que minimiza os erros de classificação em DATA1, (1,45; 2,00], igual a 1,725. Por ser derivado de DATA1, H1 registra `Generated from: DATA1`. Exposição declarada: a notícia sobre o PI em 2026 (razão perto de 1,75, `pesquisa/literatura/busca.md`) foi vista antes de fixar a regra. Daí a sensibilidade T4 (1,60 e 1,85).
+2. Rival "inércia de vínculos" acrescentado: checagem K5 e sensibilidade T2 (só vínculos novos).
+3. Perda previsto→registrado: checagem K3 com ação prévia (UF com perda > 0,3 sai da contagem). O previsto não identifica quais unidades, por isso não pode ser especificação de H1.
+4. Com poucas UFs discordantes, a probabilidade binomial sob p = 0,5 é qualificador obrigatório do relato, não regra de decisão.
+5. H2 (diluição × capacidade) é rebaixada a exploratória. A elasticidade grau–kg não discrimina oferta empurrada de atribuição: pelo MOC item 37, a proposta é montada para atender à demanda das cozinhas, e o kg não é comparável entre produtos. O estado terminal previsto é `NOT_VERIFIED`. A diluição com medida de capacidade exógena vai para `Deferred`.
+6. O funil proposta→registro não vira hipótese: é checagem (K3) e descrição (H2, T7).
+Rationale: lei 2 (as escolhas que um resultado pode influenciar são fixadas antes) e a revisão do plano antes da execução.
+Revision condition: só por CHANGE_PLAN depois do congelamento (D-10).
+
+### D-10 · 2026-10-21 · Congelamento do protocolo e do plano; registro interno
+O protocolo (`Estado: congelado`), o plano (`Freeze: frozen`), o registro interno (`pesquisa/registro.md`) e o código de H1 se congelam no mesmo commit, o que traz este bloco.
+Registro externo (OSF ou outro): não feito. Publicaria a pesquisa fora do repositório, o que é decisão humana. Fica registrado como `internal` no mapa. Se a orientação acadêmica pedir registro externo, ele deve ser feito antes de abrir DATA2, e entra por bloco novo.
+Rationale: lei 2. O registro interno prova a ordem dos commits, não a ausência de outras exposições.
+Revision condition: mudança de estimando, população, desfecho, preditores, limiares ou regra de decisão só por bloco novo com `Supersedes: D-10`, e antes de abrir DATA2. Depois de abrir DATA2, qualquer mudança torna o resultado exploratório.

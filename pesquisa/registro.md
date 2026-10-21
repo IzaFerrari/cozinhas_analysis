@@ -1,0 +1,15 @@
+# Registro interno — cozinhas: regime de alocação por UF
+
+Tipo: registro interno, versionado no git. **Não é um registro externo** (OSF, AsPredicted etc.). Este documento se congela no mesmo commit do protocolo e do plano (D-10). O commit e a sua data são a única prova de precedência, e o git não prova ausência de exposição fora dele (D-2).
+
+Derivado de `pesquisa/protocolo.md` e `analysis-plan.md`; em caso de divergência, valem esses dois.
+
+1. **Pergunta.** O grau alto das organizações em algumas UFs vem de um regime de alocação persistente na UF ou da escassez local de organizações?
+2. **Hipótese confirmatória H1.** Nas UFs elegíveis em que o regime de 2025 (DATA1) e a escassez do ano confirmatório preveem classes diferentes, o regime do ano confirmatório segue o de 2025.
+3. **Dado confirmatório.** DATA2: a planilha CONAB do PAA–Cozinhas de outro ano, com o mesmo esquema. Não identificado na data do registro; nenhum conteúdo de DATA2 foi visto. Números de notícias de 2026 foram vistos (`pesquisa/literatura/busca.md`).
+4. **Desfecho.** Classe de regime da UF (pool se a participação de pool for ≥ 0,5; D-6).
+5. **Preditores congelados.** A classe de cada UF em DATA1 (tabela em `analysis-plan.md#h1`) e o limiar de escassez 1,725.
+6. **Teste primário T1.** Contagem nas UFs discordantes. CONFIRMED com ≥ 3 discordantes e ≥ 75% de acertos da persistência; REFUTED com ≥ 75% de acertos da escassez; INCONCLUSIVE nos demais casos.
+7. **Checagens K1 a K6 e sensibilidades T2 a T5** como no plano. Só T1 decide.
+8. **Hipótese exploratória H2.** Elasticidade grau–kg em DATA1; nunca confirmatória.
+9. **Código.** `pesquisa/scripts/h1_confirmatorio.py`, congelado com este registro.
