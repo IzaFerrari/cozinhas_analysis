@@ -14,7 +14,8 @@ LIMIAR_POOL = 0.5          # classe pool se participação de pool >= 0,5
 LIMIAR_ESCASSEZ = 1.725    # razão unidades/organizações; ponto médio de (1,45; 2,00]
 LIMIARES_T4 = [1.60, 1.85]
 MIN_UNIDADES, MIN_ORGS = 10, 3
-MAX_PERDA = 0.3            # K3: UF com perda previsto→registrado acima disso sai da contagem
+MAX_PERDA = 0.3            # K3 (DATA2) e K7 (DATA1, D-12): UF com perda previsto→registrado acima disso sai da contagem
+EXCLUIDAS_K7 = ["MG", "PE", "RS"]  # perda em DATA1 > 0,3 (RUN-1)
 MIN_DISCORDANTES, PROP_DECISAO = 3, 0.75
 MIN_UFS = 6                # K2
 BANDA_T3 = (0.4, 0.6)
@@ -138,9 +139,13 @@ def main(alvo, referencia, saida):
     tab1 = por_uf(v1)
     if any(classe(tab1[uf]["pool"]) != CLASSE_DATA1[uf] for uf in CLASSE_DATA1):
         raise SystemExit("constantes de CLASSE_DATA1 não batem com o recálculo sobre DATA1")
-    elegiveis = sorted(uf for uf in CLASSE_DATA1 if uf in tab and tab[uf]["elegivel"])
+    perdas1 = perda(c1, u1)
+    if sorted(uf for uf in CLASSE_DATA1 if perdas1[uf] > MAX_PERDA) != EXCLUIDAS_K7:
+        raise SystemExit("K7 recalculada sobre DATA1 não bate com EXCLUIDAS_K7")
+    elegiveis = sorted(uf for uf in CLASSE_DATA1 if uf in tab and tab[uf]["elegivel"] and uf not in EXCLUIDAS_K7)
+    out_k7 = EXCLUIDAS_K7
     out = dict(entrada={n: hashlib.sha256(open(f"{alvo}/{n}", "rb").read()).hexdigest() for n in ["contratacoes.csv", "unidades.csv"]},
-               por_uf=tab, elegiveis=elegiveis)
+               por_uf=tab, elegiveis=elegiveis, K7_excluidas=out_k7)
     if len(elegiveis) < MIN_UFS:  # K2
         out["T1"] = dict(estado="INCONCLUSIVE", motivo=f"K2: {len(elegiveis)} UFs elegíveis nos dois anos (< {MIN_UFS})")
     else:

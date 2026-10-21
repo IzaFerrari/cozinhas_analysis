@@ -33,7 +33,7 @@ Rota, perecibilidade e complementaridade de cesta estão em `Deferred` no mapa (
 
 ### Estimandos
 
-- **E1.** Na população de UFs elegíveis nos dois anos, sem as excluídas por K3, e restrita às UFs discordantes: a proporção cuja classe de regime em DATA2 coincide com a classe de DATA1, contra a proporção que coincide com a classe prevista pela razão unidades/organizações de DATA2 (limiar 1,725).
+- **E1.** Na população de UFs elegíveis nos dois anos, sem as excluídas por K3 (perda em DATA2) e por K7 (perda em DATA1; D-12), e restrita às UFs discordantes: a proporção cuja classe de regime em DATA2 coincide com a classe de DATA1, contra a proporção que coincide com a classe prevista pela razão unidades/organizações de DATA2 (limiar 1,725).
 - **E2.** Em DATA1, nas organizações CDS com vínculo: a inclinação de log(grau registrado) em log(kg previsto) dentro da UF.
 
 ### Dados e população

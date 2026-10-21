@@ -92,3 +92,11 @@ Revision condition: mudança de estimando, população, desfecho, preditores, li
 O relatório de dados (`pesquisa/dados/relatorio.md`) documenta a procedência, a ligação, as duplicidades, a granularidade e a população de DATA1. DATA2 não foi identificado: o arquivo-fonte atual só tem 2025, com as mesmas linhas de DATA1, e as buscas não acharam planilha de outro ano. H1 fica `BLOCKED` até DATA2 existir. A fase 4 é dada como alcançada para DATA1, com o bloqueio de DATA2 explícito.
 Rationale: lei 1. A falta do dado confirmatório vira estado, não suposição.
 Revision condition: DATA2 identificado, com hash e procedência registrados antes de abrir. Isso reabre a fase 4 para DATA2 e permite o FIT de H1.
+
+### D-12 · 2026-10-21 · REOPEN de H1: checagem K7 da classe de DATA1
+Supersedes: D-10
+CHANGE_PLAN com destino `REOPEN`. O ensaio em amostra RUN-1 (exploratório, só DATA1) mostrou que a perda previsto→registrado em DATA1 passa de 0,3 em PE (0,67), RS (0,61) e MG (0,32) (`pesquisa/agregados/h1_data1_em_amostra.json`). O plano congelado na D-10 aplicava esse limite (K3) só a DATA2. Com isso, a classe de persistência dessas três UFs se apoiava em registro incompleto. O caso mais forte é o PE: classe "pool" calculada sobre um terço das unidades previstas.
+Mudança: acrescenta A7/K7 a H1. A UF cuja perda em DATA1 seja > 0,3 sai da população primária, com o mesmo limite de K3. Em DATA1, a população primária máxima passa de onze para oito UFs (AL, BA, PB, PI, PR, RN, SC, SE). O código ganha a constante `EXCLUIDAS_K7` e uma checagem que a recalcula sobre DATA1. Nada mais muda: estimando, desfecho, preditores, limiares e regra de decisão continuam os da D-9 e da D-10.
+Transparência: a mudança foi motivada por um diagnóstico de DATA1 visto depois do congelamento da D-10, e **antes** de qualquer exposição a DATA2, que continua não identificado (D-11). DATA1 já constava em `Generated from`. O novo congelamento é o commit que traz este bloco; o congelamento anterior (cd2a582) fica no histórico.
+Rationale: lei 2. A mudança é registrada antes da exposição ao dado confirmatório, e o limite é o mesmo já fixado para DATA2.
+Revision condition: mudança só por bloco novo com `Supersedes: D-12`, antes de abrir DATA2.

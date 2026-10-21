@@ -10,6 +10,6 @@ Derivado de `pesquisa/protocolo.md` e `analysis-plan.md`; em caso de divergênci
 4. **Desfecho.** Classe de regime da UF (pool se a participação de pool for ≥ 0,5; D-6).
 5. **Preditores congelados.** A classe de cada UF em DATA1 (tabela em `analysis-plan.md#h1`) e o limiar de escassez 1,725.
 6. **Teste primário T1.** Contagem nas UFs discordantes. CONFIRMED com ≥ 3 discordantes e ≥ 75% de acertos da persistência; REFUTED com ≥ 75% de acertos da escassez; INCONCLUSIVE nos demais casos.
-7. **Checagens K1 a K6 e sensibilidades T2 a T5** como no plano. Só T1 decide.
+7. **Checagens K1 a K7 e sensibilidades T2 a T5** como no plano. K7 foi acrescentada por REOPEN antes de qualquer DATA2 (D-12). Só T1 decide.
 8. **Hipótese exploratória H2.** Elasticidade grau–kg em DATA1; nunca confirmatória.
 9. **Código.** `pesquisa/scripts/h1_confirmatorio.py`, congelado com este registro.

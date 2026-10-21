@@ -15,7 +15,7 @@ Generated from: DATA1
 ### Design
 
 Claim type: associational
-Population: UFs elegíveis no ano confirmatório (DATA2) que também foram elegíveis em DATA1. Elegível é a UF (da organização) com ≥ 10 códigos de cozinha vinculados a projetos CDS e ≥ 3 organizações com vínculo. Em DATA1 são AL, BA, MG, PB, PE, PI, PR, RN, RS, SC e SE.
+Population: UFs elegíveis no ano confirmatório (DATA2) que também foram elegíveis em DATA1, sem as excluídas por K3 (DATA2) e K7 (DATA1, D-12). Elegível é a UF (da organização) com ≥ 10 códigos de cozinha vinculados a projetos CDS e ≥ 3 organizações com vínculo. Em DATA1 são AL, BA, MG, PB, PE, PI, PR, RN, RS, SC e SE.
 Exposure: dois preditores da classe de regime de cada UF em DATA2, fixados antes de abrir DATA2. (a) Persistência: a classe da UF em DATA1 (tabela abaixo). (b) Escassez: pool se a razão unidades/organizações da UF em DATA2 for ≥ 1,725, esparsa caso contrário.
 Outcome: classe de regime da UF em DATA2. É pool se a participação de pool for ≥ 0,5. A participação de pool é a fração dos vínculos organização–código da UF que estão em componentes conexos com ≥ 2 organizações e densidade ≥ 0,5 (D-6).
 Contrast: nas UFs discordantes (preditores (a) e (b) diferentes), a proporção em que a classe observada em DATA2 coincide com (a), contra a proporção em que coincide com (b).
@@ -58,6 +58,7 @@ BLOCKED when: DATA2 não foi identificado ou K1 falha.
 | A4 | A UF da organização representa onde o regime opera: vínculos interestaduais ≤ 5% em cada UF elegível | K4 | relatar as UFs acima de 5% como limitação; a decisão não muda |
 | A5 | A persistência não é só repetição dos mesmos vínculos de DATA1 (inércia) | K5 | se a sobreposição mediana de pares (CNPJ, código) com DATA1 nas UFs discordantes for > 0,5, a interpretação se restringe a "persistência compatível com inércia de vínculos" e T2 é relatado ao lado; o primário decide |
 | A6 | A granularidade do código não cria nem desfaz pools: códigos não-CS (EG, "unidade gestora") ≤ 20% dos vínculos de cada UF | K6 | relatar e ler T5 (só códigos CS) ao lado do primário; se T5 discordar do primário, a palavra "regime" fica qualificada como dependente da unidade de contagem |
+| A7 | A classe de DATA1 de cada UF se apoia em registro completo o bastante: perda previsto→registrado em DATA1 ≤ 0,3 (acrescentada por REOPEN, D-12) | K7 | a UF sai da população primária. Em DATA1 isso exclui MG (0,32), PE (0,67) e RS (0,61) (`pesquisa/agregados/h1_data1_em_amostra.json`), e a população primária máxima passa a AL, BA, PB, PI, PR, RN, SC e SE |
 
 ### Primary analysis
 
