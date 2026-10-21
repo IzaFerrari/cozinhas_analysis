@@ -30,7 +30,7 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 | 4 Data | reached | | `pesquisa/dados/relatorio.md` · `pesquisa/agregados/dados.csv` · `pesquisa/decisoes.md#d-11` |
 | 5 Analysis | reached | | `.research/runs/RUN-2.json` · `.research/runs/RUN-3.json` · `.research/runs/RUN-4.json` · `.research/runs/RUN-5.json` · `.research/runs/RUN-6.json` · `.research/runs/RUN-7.json` · `pesquisa/agregados/h2_data1.json` · `pesquisa/decisoes.md#d-14` · `pesquisa/decisoes.md#d-15` |
 | 6 Writing | reached | | `pesquisa/texto/artigo.md` · `pesquisa/decisoes.md#d-22` |
-| 7 Review | pending | REVIEW-7 do manuscrito descritivo (REVIEW-5 e REVIEW-6 deram FAIL; respostas registradas) | `.research/reviews/REVIEW-4.md` · `.research/reviews/REVIEW-3.md` · `.research/reviews/REVIEW-1-respostas.md` · `.research/reviews/REVIEW-2-respostas.md` · `pesquisa/decisoes.md#d-18` |
+| 7 Review | reached | | `.research/reviews/REVIEW-7.md` · `.research/reviews/REVIEW-6-respostas.md` · `.research/reviews/REVIEW-5-respostas.md` · `pesquisa/decisoes.md#d-25` | `.research/reviews/REVIEW-4.md` · `.research/reviews/REVIEW-3.md` · `.research/reviews/REVIEW-1-respostas.md` · `.research/reviews/REVIEW-2-respostas.md` · `pesquisa/decisoes.md#d-18` |
 | 8 Publication | blocked | decisões humanas (forma de publicação, venue, autoria, licença, ética, registro externo) e DATA2 para H1 | `pesquisa/publicacao.md` · `pesquisa/decisoes.md#d-20` |
 
 ## Deferred
@@ -59,4 +59,5 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 - 2026-10-21: escopo passa a descritivo por decisão humana (D-22); manuscrito reescrito como retrato descritivo de 2025, com H1 como trabalho futuro
 - 2026-10-21: REVIEW-5 = FAIL (o indicador de pool depende do tamanho da rede); RUN-7 descritiva (H3) e manuscrito corrigido (D-23)
 - 2026-10-21: REVIEW-6 = FAIL (frase falsa sobre perda × grau); corrigida com outros nove ajustes (D-24)
-- Next: REVIEW-7 do manuscrito descritivo; depois, decisões de publicação
+- 2026-10-21: REVIEW-7 = PASS; ajustes finais aplicados sem nova rodada (D-25); pesquisa descritiva encerrada
+- Next: decisões humanas de publicação (venue, autoria, licença, ética); H1 só quando a planilha tiver outro ano e com medida ajustada por tamanho

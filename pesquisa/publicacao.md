@@ -1,6 +1,6 @@
 # Publicação — PUBLISH preflight (fase 8)
 
-Data: 2026-10-21. Alvo: o manuscrito **descritivo** `pesquisa/texto/artigo.md` (escopo da D-22, corrigido pela D-23). Atualização: a revisão de referência passa a ser a REVIEW-6, sobre o manuscrito descritivo; as linhas abaixo que citam a REVIEW-3, a REVIEW-4 e as afirmações C1–C8 descrevem o estado anterior (f0a8c93). **Nada foi publicado nem enviado para fora do repositório.**
+Data: 2026-10-21. Alvo: o manuscrito **descritivo** `pesquisa/texto/artigo.md` (escopo da D-22, corrigido pela D-23). Atualização final (D-25): a revisão de referência é a REVIEW-7 (PASS), sobre o manuscrito descritivo, com os ajustes finais aplicados sem nova rodada. A linhagem tem 12 afirmações (C1–C3, C5–C13). As linhas abaixo que citam a REVIEW-3, a REVIEW-4 e C1–C8 descrevem o estado anterior (f0a8c93). As decisões humanas pendentes continuam valendo. **Nada foi publicado nem enviado para fora do repositório.**
 
 ## Requisitos verificáveis aqui
 

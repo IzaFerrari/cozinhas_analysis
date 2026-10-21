@@ -206,3 +206,9 @@ Revision condition: medida ajustada por tamanho que mostre diferença entre UFs 
 A REVIEW-6 (FAIL) achou uma frase falsa introduzida pela correção anterior: "as UFs com grau alto são as mais afetadas pela perda". É o contrário (AL 0,11, PB e RN 0,00). Também achou generalizações excessivas: o superlativo sobre a cobertura; a cobertura tratada como independente do tamanho, quando é a densidade do grafo da UF; a decomposição do grau de AL, PB e RN tratada como igual; "medidas que não dependem do tamanho"; e PE, RS e MG sem ressalva de registro. Tudo foi corrigido no manuscrito, no plano (linha de contexto e A1 de H3) e no protocolo (E4). A frase sobre a perda passa a ser a afirmação C11 (R6), e a dos vínculos interestaduais, C12 (R6).
 Rationale: lei 5.
 Revision condition: nenhuma; é correção de redação.
+
+### D-25 · 2026-10-21 · Encerramento: REVIEW-7 PASS e ajustes finais
+A REVIEW-7 deu PASS no manuscrito descritivo (commit c3681b7), com oito ajustes de redação (A1–A8), aplicados no commit que traz este bloco. Por pedido de quem conduz a pesquisa ("termina logo"), os ajustes **não** passaram por nova rodada de revisão. São só restrições de escopo e qualificações de frases já revisadas, mais a anotação C13 (R3) e a correção "nº de vínculos". Nenhum número novo foi introduzido.
+Estado final: H1 `BLOCKED` (registrada; exige outro ano e medida ajustada por tamanho, D-21 e D-23); H2 e H3 `NOT_VERIFIED` (exploratória e descritiva); manuscrito descritivo revisado; publicação bloqueada em decisões humanas (D-20).
+Rationale: limite de autoridade e pedido humano de encerrar.
+Revision condition: decisão humana de publicar (venue, autoria, licença, ética) ou a planilha ganhar outro ano.
