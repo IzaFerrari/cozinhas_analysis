@@ -16,8 +16,8 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 ## Hypotheses
 | Id | Prediction | Refutation | State | Pointer |
 |---|---|---|---|---|
-| H1 | Nas UFs discordantes, o regime do ano confirmatório segue o regime de 2025 (persistência), não a escassez | ≥ 75% das UFs discordantes seguem a escassez (T1) | — | `analysis-plan.md#h1` |
-| H2 | Exploratória: elasticidade grau–kg dentro da UF em DATA1 | não se aplica (exploratória) | — | `analysis-plan.md#h2` |
+| H1 | Nas UFs discordantes, o regime do ano confirmatório segue o regime de 2025 (persistência), não a escassez | ≥ 75% das UFs discordantes seguem a escassez (T1) | BLOCKED | `analysis-plan.md#h1` |
+| H2 | Exploratória: elasticidade grau–kg dentro da UF em DATA1 | não se aplica (exploratória) | NOT_VERIFIED | `analysis-plan.md#h2` |
 
 ## Gates
 | Phase | State | Blocked by | Evidence |
@@ -27,7 +27,7 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 | 2 Literature | reached | | `pesquisa/literatura/busca.md` · `pesquisa/literatura/fontes.md#lacuna` · `pesquisa/decisoes.md#d-8` |
 | 3 Protocol | reached | | `pesquisa/protocolo.md#compromissos-congelados` · `analysis-plan.md` · `pesquisa/registro.md` · `pesquisa/decisoes.md#d-10` · `pesquisa/decisoes.md#d-12` |
 | 4 Data | reached | | `pesquisa/dados/relatorio.md` · `pesquisa/agregados/dados.csv` · `pesquisa/decisoes.md#d-11` |
-| 5 Analysis | pending | | |
+| 5 Analysis | reached | | `.research/runs/RUN-2.json` · `.research/runs/RUN-3.json` · `.research/runs/RUN-4.json` · `pesquisa/agregados/h2_data1.json` · `pesquisa/decisoes.md#d-14` |
 | 6 Writing | pending | | |
 | 7 Review | pending | | |
 | 8 Publication | pending | | |
@@ -46,4 +46,5 @@ Registration: internal — `pesquisa/registro.md`, congelado com o protocolo em 
 - 2026-10-21: fase 3 alcançada — H1 confirmatória e H2 exploratória (D-9); protocolo, plano e registro interno congelados (D-10)
 - 2026-10-21: fase 4 alcançada para DATA1; DATA2 não identificado, H1 bloqueada (D-11)
 - 2026-10-21: RUN-1 (H1 em amostra, exploratório) mostrou perda > 0,3 em PE, RS e MG em DATA1; REOPEN acrescenta K7 e recongela o plano (D-12)
-- Next: fase 5 — RUN-2 (H2 exploratória) e estado terminal de H1 (BLOCKED sem DATA2)
+- 2026-10-21: fase 5 alcançada — H1 BLOCKED (sem DATA2), H2 NOT_VERIFIED; RUN-2 a RUN-4 exploratórias com replay manual EXACT (D-13, D-14)
+- Next: fase 6 — manuscrito com os resultados exploratórios e o desenho confirmatório registrado

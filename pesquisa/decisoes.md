@@ -106,3 +106,12 @@ O recibo `RUN-1` (commit 3b14a99) declarava DATA1 duas vezes, com um caminho par
 `RUN-2` descreve a **mesma execução** (execution freeze 09b4cf7, run commit 445fabf, mesma saída), com DATA1 identificado pelo diretório `pesquisa/dados/brutos` (um único tree no git) e resultado `R2`. `R1` não é usado em nenhum texto.
 Rationale: lei 1. A correção recebe identidade nova, e a execução e a saída não mudam.
 Revision condition: não revisável; é registro histórico.
+
+### D-14 · 2026-10-21 · Fase 5: estados terminais
+FIT de H1: o protocolo e o plano estão congelados (0ef5f3a), o registro interno também, e o código está congelado e ensaiado (RUN-2, RUN-4). Falta o dado confirmatório: DATA2 não está identificado (D-11), e nenhuma execução confirmatória pode expor resultado. **H1 = `BLOCKED`.** Entra quando DATA2 for identificado e registrado antes de abrir (D-11); então se roda `h1_confirmatorio.py` sem mudanças, com recibo confirmatório (`analysis_role: primary`).
+**H2 = `NOT_VERIFIED`**, como fixado no plano (D-9): o resultado de RUN-3 (R3) é descrição exploratória de DATA1 e não sustenta mecanismo.
+Execuções exploratórias válidas: RUN-2 (H1 em amostra, código da D-10; R2), RUN-3 (H2; R3) e RUN-4 (H1 em amostra, código da D-12; R4). RUN-1 foi retirado (D-13).
+Replay: o `replay.py` da ferramenta dá `ERROR` nas três, porque o recibo chama `.venv/bin/python` por caminho relativo e o `.venv` não é versionado. A verificação manual, com worktree no execution freeze, o Python do `.venv` por caminho absoluto e comparação byte a byte, deu `EXACT` em RUN-2, RUN-3 e RUN-4 (2026-10-21). Isso prova regeneração neste ambiente, não correção científica.
+Diagnósticos de DATA1 vistos nos ensaios: K7 exclui MG, PE e RS; K4 passa de 5% em SE (0,091) e MG (0,077), o que no plano é limitação a relatar; K6 fica abaixo de 20% em todas as UFs elegíveis.
+Rationale: estados terminais sob a regra registrada; capacidade ausente vira `BLOCKED`, não estimativa.
+Revision condition: DATA2 identificado reabre H1 (fase 4 → FIT → fase 5).
