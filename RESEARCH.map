@@ -22,7 +22,7 @@ Registration: none
 |---|---|---|---|
 | 1A Problem — formulate | reached | | `pesquisa/decisoes.md#d-4` · `pesquisa/exploracao/2026-10-21-explorer.md` · `pesquisa/protocolo.md#question` · `pesquisa/decisoes.md#d-5` |
 | 1B Problem — establish | reached | | `pesquisa/problem-brief.md` · `pesquisa/decisoes.md#d-7` |
-| 2 Literature | pending | | |
+| 2 Literature | reached | | `pesquisa/literatura/busca.md` · `pesquisa/literatura/fontes.md#lacuna` · `pesquisa/decisoes.md#d-8` |
 | 3 Protocol | pending | | |
 | 4 Data | pending | | |
 | 5 Analysis | pending | | |
@@ -39,4 +39,5 @@ Registration: none
 - 2026-10-21: pesquisa recomeçada com escopo explicativo (D-1 a D-3); só o snapshot DATA1 de 2026-10-14 foi reaproveitado, já exposto (D-2)
 - 2026-10-21: 1A alcançado — orçamento antes da exploração (D-4), três linhagens ativas, enunciado associacional (D-5)
 - 2026-10-21: 1B alcançado — P1 e P2 SHOWN (D-6), com regime e escassez quase colineares em DATA1 (D-7)
-- Next: fase 2 — ler as chamadas públicas CONAB/MDS do PAA–Cozinhas sobre quem lista as unidades da proposta e verificar, sem abrir o conteúdo, se existe a planilha de outro ano como dado independente
+- 2026-10-21: fase 2 alcançada — regra de seleção lida no MOC Título 30 (versão 2026); lacuna sobre a estrutura organização–unidade; planilha de outro ano não encontrada (D-8)
+- Next: fase 3 — fixar H1/H2, plano de análise e registro interno, e congelar antes de qualquer dado independente
