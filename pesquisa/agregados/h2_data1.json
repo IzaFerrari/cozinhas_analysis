@@ -1,0 +1,63 @@
+{
+ "T6_grau_registrado": {
+  "beta": 0.291,
+  "ep": 0.113,
+  "ic95": [
+   0.058,
+   0.524
+  ],
+  "organizacoes": 206,
+  "ufs": 27
+ },
+ "T7_grau_previsto": {
+  "beta": 0.371,
+  "ep": 0.115,
+  "ic95": [
+   0.135,
+   0.608
+  ],
+  "organizacoes": 206,
+  "ufs": 27
+ },
+ "grau": {
+  "maximo": 23,
+  "media": 3.42,
+  "mediana": 2.0,
+  "organizacoes": 206,
+  "p90": 9.0,
+  "prop_grau1": 0.466,
+  "vinculos": 705
+ },
+ "perda_por_faixa": {
+  "1": {
+   "com_perda": 1,
+   "perda": 0.01,
+   "previsto": 98,
+   "projetos": 98,
+   "registrado": 97
+  },
+  "10+": {
+   "com_perda": 22,
+   "perda": 0.455,
+   "previsto": 589,
+   "projetos": 31,
+   "registrado": 321
+  },
+  "2-3": {
+   "com_perda": 7,
+   "perda": 0.094,
+   "previsto": 117,
+   "projetos": 48,
+   "registrado": 106
+  },
+  "4-9": {
+   "com_perda": 16,
+   "perda": 0.206,
+   "previsto": 247,
+   "projetos": 42,
+   "registrado": 196
+  }
+ },
+ "perda_total": 0.315,
+ "registrado_acima_previsto": 0
+}
