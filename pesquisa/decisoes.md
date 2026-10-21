@@ -36,3 +36,23 @@ Parada: cada linhagem ativa precisa ter uma observação discriminante que DATA1
 Saída: `pesquisa/exploracao/2026-10-21-explorer.md`.
 Rationale: o gate 1A exige um orçamento registrado antes da exploração. A proibição preserva a possibilidade de um teste confirmatório.
 Revision condition: ampliar a amplitude ou a evidência exige um bloco novo antes de rodar.
+
+### D-5 · 2026-10-21 · Fecho do gate 1A: tipo de afirmação, portfólio e adiamentos
+Tipo de afirmação: associacional. A pesquisa discrimina mecanismos pelos padrões que cada um prevê no grafo organização–unidade. Não há intervenção nem desenho de identificação que permita leitura causal do regime sobre resultados do programa.
+Portfólio ativo (até três, D-4): regime de alocação por UF; funil proposta → registro; diluição × capacidade (`pesquisa/exploracao/2026-10-21-explorer.md`). Vão para `Deferred`: economia de rota, perecibilidade e complementaridade de cesta.
+Recorte explicativo: só projetos CDS, em que a organização entrega diretamente. CDAF e CI ficam fora do recorte explicativo.
+Objeção acrescentada pelo orquestrador depois da exploração, a partir de números já calculados nela: em PI e BA, cada organização cobre 0,04–0,06 do conjunto da UF, mas cada unidade tem em média 4,3 e 3,5 organizações. Isso sugere vários pools menores e não territórios exclusivos. Se for assim, a diferença entre UFs é a escala do pool e não o regime. A objeção entra como refutação (c) do enunciado e é testada no gate 1B (D-6).
+Rationale: lei 3 (DATA1 é descoberta) e o orçamento D-4. CDS é o único mecanismo em que o grau da organização mede entrega direta.
+Revision condition: um documento da fase 2 que mostre que CDAF ou CI seguem a mesma regra de montagem; ou o resultado do gate 1B que reformule a pergunta.
+
+### D-6 · 2026-10-21 · Referência do gate 1B (fixada antes de calcular os componentes)
+O gate 1B examina duas premissas em DATA1, nos projetos CDS. Os números saem de `pesquisa/scripts/problema.py` para `pesquisa/agregados/`.
+P1. Há heterogeneidade a explicar. Entre as organizações CDS com ao menos uma unidade vinculada, a premissa vale se média − mediana do grau ≥ 1 e se os 10% de organizações de maior grau reúnem ≥ 0,20 dos vínculos. Transparência: P1 é informada pelos dados (D-2). A mesma forma de referência foi usada na pesquisa anterior; aqui ela é decisão nova, não herança.
+P2. Os regimes sobrevivem à divisão em componentes. São elegíveis as UFs com ≥ 10 unidades CDS vinculadas e ≥ 3 organizações. Em cada UF elegível, monta-se o grafo bipartido organização–código e calculam-se os componentes conexos. Um vínculo é de "pool" quando está num componente com ≥ 2 organizações e densidade (vínculos ÷ organizações × unidades) ≥ 0,5. A participação de pool da UF é a fração dos vínculos da UF que são de pool.
+- `SHOWN` se ≥ 2 UFs elegíveis têm participação de pool ≥ 0,6 e ≥ 2 têm ≤ 0,3.
+- `NOT_SHOWN` se todas as UFs elegíveis têm participação ≥ 0,5. Nesse caso há pool em toda parte na escala do componente, e a pergunta se reformula para a escala do pool (refutação (c) do enunciado).
+- `INCONCLUSIVE` nos demais casos.
+Transparência: a cobertura por UF, a densidade da UF inteira e a razão unidades/organizações já foram vistas na exploração. Os componentes conexos e as suas densidades não foram calculados antes desta decisão. Os limiares 0,5, 0,6 e 0,3 são escolhas simples desta pesquisa, não convenção da literatura.
+Limite conhecido: componentes conexos não detectam pools sobrepostos dentro de um componente grande e esparso. Se uma UF grande sair "partição", isso não exclui pools locais sobrepostos. Esse limite fica registrado no problem brief.
+Rationale: a refutação (c) é a forma mais barata de fazer a premissa do regime desaparecer usando só DATA1.
+Revision condition: um limiar só muda por bloco novo e antes de qualquer uso confirmatório. Mudar depois de ver o resultado de P2 torna o veredito exploratório.
