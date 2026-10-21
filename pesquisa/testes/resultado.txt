@@ -1,0 +1,17 @@
+16 casos passaram:
+- borda 2,00 é pool
+- borda 1,45 é esparsa
+- 1,725 é indeterminado
+- só contam AL, PB e BA (RN na faixa, PR herdado, SE sem mudança)
+- 2 de 3 para a regra dá INCONCLUSIVE
+- 3 de 3 para a regra dá CONFIRMED
+- 3 de 3 para a escassez dá REFUTED
+- ponto 1,725 conta RN em 1,70
+- 2026: PI exposto e excluído
+- 2026: PR herdado, fora de K2
+- 2026: seis utilizáveis, nenhum discordante, INCONCLUSIVE
+- 2026: nenhum projeto repetido de DATA1
+- sem arquivo de hash: BLOCKED
+- rótulo de mecanismo estranho: BLOCKED (K1)
+- sem coluna ANO: BLOCKED (K1)
+- só projetos já vistos (ano 2025, não ensaio): BLOCKED
