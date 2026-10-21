@@ -141,3 +141,55 @@ Why this estimates E2: dentro da UF, a inclinação log–log é a elasticidade 
 
 May claim: a elasticidade estimada em DATA1 e o seu IC aproximado, como descrição exploratória; a perda previsto→registrado por faixa de tamanho.
 May not claim: que a oferta "se dilui" por atribuição de unidades, ou que a capacidade empurra o grau; qualquer confirmação; generalização para outros anos.
+
+## H3
+
+Estimand: E4
+Primary test: T8
+Mode: exploratory
+Generated from: DATA1
+
+Bloco descritivo (D-22, D-23): não é hipótese, e sim o recipiente dos estimandos descritivos do censo de DATA1. E3 (grau) e E5 (perda) já estão em R3; E2 (elasticidade) é tratada como descrição (D-23); E4, a estrutura por UF, sai de T8.
+
+### Design
+
+Claim type: descriptive
+Population: UFs com ≥ 10 códigos CDS vinculados e ≥ 3 organizações em DATA1 (onze UFs); vínculos só com códigos `CS<n>`/`EG<n>`.
+Exposure: nenhuma (descrição).
+Outcome: por UF: vínculos por organização, organizações por unidade (média, mediana, fração com ≥ 2), cobertura média (vínculos ÷ organizações × unidades), componentes e densidade do componente principal, participação de pool, fração exclusiva, e a associação de postos entre a participação de pool e o nº de organizações, a razão e a cobertura.
+Contrast: entre UFs, descritivo.
+Time: 2025 (DATA1).
+Identification: nenhuma; descrição.
+Dependence: não há inferência; as associações de postos entre onze UFs são descritivas.
+
+### Decision rule
+
+CONFIRMED when: nunca. É descrição (D-23).
+REFUTED when: nunca. É descrição (D-23).
+INCONCLUSIVE when: não se aplica; terminal NOT_VERIFIED como hipótese.
+
+### Assumptions
+
+| ID | Assumption | Check | Failure action |
+|---|---|---|---|
+| A1 | A participação de pool mede compartilhamento independentemente do tamanho da rede | K1 | não vale: densidade ≥ 0,5 exige, num componente com O organizações, ≥ O/2 organizações por unidade em média, e fica mais difícil com mais organizações (REVIEW-5). Por isso a descrição usa também medidas que não dependem do tamanho (vínculos por organização, organizações por unidade) e relata a associação da participação de pool com o nº de organizações |
+
+### Primary analysis
+
+Test: T8
+Estimator: contagens e razões por UF; correlação de postos de Spearman entre UFs (`pesquisa/scripts/descricao.py`).
+Inference: nenhuma.
+Why this estimates E4: descreve a estrutura do grafo de cada UF com medidas de tamanho e de compartilhamento.
+
+### Sensitivity
+
+- none
+
+### Specification dimensions
+
+- none
+
+### Interpretation boundary
+
+May claim: os valores descritivos por UF em 2025 e a associação de postos entre eles.
+May not claim: que as UFs têm "regimes" diferentes independentemente do tamanho da rede; qualquer explicação causal; generalização para outros anos.

@@ -191,3 +191,13 @@ Decisão humana (IzaFerrari, 2026-10-21): "se não conseguir o porquê, faz desc
 - O manuscrito passa a ser descritivo. A explicação aparece só como hipótese aberta, com o teste registrado.
 Rationale: escolha de quem conduz a pesquisa. Descrição censitária de um snapshot exposto é legítima se as escolhas posteriores à exposição estão declaradas e nada é apresentado como confirmação.
 Revision condition: a planilha ganhar outro ano reabre H1 (D-21) sem desfazer a descrição.
+
+### D-23 · 2026-10-21 · Resposta à REVIEW-5: a métrica de pool depende do tamanho da rede
+A REVIEW-5 (FAIL) mostrou que a participação de pool (D-6) não mede só compartilhamento. Num componente com O organizações, a densidade ≥ 0,5 exige, em média, ≥ O/2 organizações por unidade, e por isso fica mais difícil com mais organizações. Nas UFs "esparsas" (PI, BA), cada organização atende tantas unidades quanto nas de pool, e cada unidade tem até mais fornecedores. O que difere é a fração das unidades da UF que cada organização cobre. A "coincidência com a escassez" é, em parte, construída pela métrica.
+Consequências:
+1. **Descrição.** Entra o bloco descritivo H3 (T8, `pesquisa/scripts/descricao.py`), com medidas que não dependem do tamanho (vínculos por organização, organizações por unidade) ao lado da participação de pool e da sua associação com o nº de organizações. O manuscrito é corrigido para descrever o contraste como cobertura da UF por organização, não como "compartilhar × espalhar". O retrato de "dois regimes" deixa de ser afirmado.
+2. **H1 (registrada e BLOCKED).** A mesma dependência atinge a classe de regime usada em H1: com mais organizações num ano novo, a classe tende a "esparsa" por construção. Isso enfraquece o teste, porque o preditor de escassez e o desfecho compartilham o nº de organizações. H1 continua registrada como estava (D-18). **Antes de usá-la com DATA2**, ela deve ser reaberta com uma medida de compartilhamento ajustada por tamanho, por exemplo comparada a uma atribuição aleatória com os mesmos graus. Fica como condição de entrada.
+3. **E2.** A elasticidade (R3) entra no escopo descritivo, e o IC agrupado é tratado como aproximação descritiva, não inferência (F3).
+4. **Manuscrito.** Volta a declarar a mudança de escopo de explicativo para descritivo (D-22), a versão do manual não lida para 2025, o registro interno reaberto três vezes e o corte ajustado aos dados (F4). MG passa a ser descrita à parte (F5). Os números do Resumo passam ao corpo com fonte (F6). Usa "unidades vinculadas" e define a razão (F2).
+Rationale: lei 5. Uma revisão adversarial mostrou que a métrica não sustentava a leitura.
+Revision condition: medida ajustada por tamanho que mostre diferença entre UFs além do efeito de tamanho.
